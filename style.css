@@ -16,6 +16,8 @@ h2 {
 
 .flip-container {
     perspective: 1000px;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
   .flip-container:active .flipper, .flip-container.onclick .flipper {
     transform: rotateY(-180deg);
@@ -23,14 +25,16 @@ h2 {
   .flip-container, .front, .back {
     width: 720px;
     max-width: 100%;
-    height: 480px;
+    height: 200px;
     color: #FFFFFF;
-    background: #6A754B;
+    background: transparent;
+    
   }
   .flipper {
     transition: 2.0s;
     transform-style: preserve-3d;
     position: relative;
+    border: solid black;
   }
   .front, .back {
     backface-visibility: hidden;
@@ -43,6 +47,7 @@ h2 {
     transform: rotateY(0deg);
     background-image: url(http://www.mobirise-tutorials.com/LawyerM4-Tutorials/images/Spatzen-Vorne.jpg);
     background-repeat: no-repeat;
+    background-image: opacity(0.2);
   }
   .back {
     transform: rotateY(-180deg);
@@ -50,15 +55,15 @@ h2 {
     background-repeat: no-repeat;
     background-position: 50% 50%;
   }
-  div.content1 {
-    font-size: 12px;
-    width: 150px;
+div.content1 {
+    font-size: 100px;
+    width: inherit;
     height: 120px;
-    margin: 20px;
+    margin: auto;
     padding: 10px;
     color: Black;
-    background: rgba(255, 255, 255, 0.7);
-    border: Solid 1px rgba(255, 255, 255, 0.75);
+    background: transparent;
+    text-align: center;
   }
   div.content2 {
     font-size: 12px;
