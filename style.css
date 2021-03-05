@@ -14,22 +14,63 @@ h2 {
 
 }
 
-#img1 {
-    
-}
-
-.front-text {
-
-}
-
-.back-text {
-    transform: rotateY(180deg);
-}
-
-.back-text.flip {
-    transform: rotateY(180deg);
-}
-
-.front-picture {
-
-}
+.flip-container {
+    perspective: 1000px;
+  }
+  .flip-container:active .flipper, .flip-container.onclick .flipper {
+    transform: rotateY(-180deg);
+  }
+  .flip-container, .front, .back {
+    width: 720px;
+    max-width: 100%;
+    height: 480px;
+    color: #FFFFFF;
+    background: #6A754B;
+  }
+  .flipper {
+    transition: 2.0s;
+    transform-style: preserve-3d;
+    position: relative;
+  }
+  .front, .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .front {
+    z-index: 2;
+    transform: rotateY(0deg);
+    background-image: url(http://www.mobirise-tutorials.com/LawyerM4-Tutorials/images/Spatzen-Vorne.jpg);
+    background-repeat: no-repeat;
+  }
+  .back {
+    transform: rotateY(-180deg);
+    background-image: url(http://www.mobirise-tutorials.com/LawyerM4-Tutorials/images/Spatz-Hinten.jpg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+  }
+  div.content1 {
+    font-size: 12px;
+    width: 150px;
+    height: 120px;
+    margin: 20px;
+    padding: 10px;
+    color: Black;
+    background: rgba(255, 255, 255, 0.7);
+    border: Solid 1px rgba(255, 255, 255, 0.75);
+  }
+  div.content2 {
+    font-size: 12px;
+    width: 150px;
+    height: 120px;
+    margin: 20px;
+    padding: 10px;
+    color: White;
+    background: rgba(255, 255, 255, 0.4);
+    border: Solid 1px rgba(255, 255, 255, 0.75);
+  }
+  div.content2 a {
+    color: White;
+    text-decoration: Underline;
+  }
