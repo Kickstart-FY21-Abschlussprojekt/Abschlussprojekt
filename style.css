@@ -1,0 +1,35 @@
+h1 {
+
+}
+
+h2 {
+
+}
+
+.navigation {
+
+}
+
+.container {
+
+}
+
+#img1 {
+    
+}
+
+.front-text {
+
+}
+
+.back-text {
+    transform: rotateY(180deg);
+}
+
+.back-text.flip {
+    transform: rotateY(180deg);
+}
+
+.front-picture {
+
+}
