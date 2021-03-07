@@ -1,38 +1,3 @@
-const quizQuestions = [
-    {
-        "id": 1,
-        "question": "Test?",
-        "answers": {
-            "a": "Test",
-            "b": "Test",
-            "c": "Test",
-            "d": "Fehler"
-        },
-        "rightAnswer": "a"
-    },
-    {
-        "id": 2,
-        "question": "Who am I?",
-        "answers": {
-            "a": "1",
-            "b": "2",
-            "c": "3",
-            "d": "4"
-        },
-        "rightAnswer": "a"
-    },
-    {
-        "id": 3,
-        "question": "Who Invented JS?",
-        "answers": {
-            "a": "A",
-            "b": "B",
-            "c": "C",
-            "d": "D"
-        },
-        "rightAnswer": "d"
-    }
-]
     /* Implementation Instruction:
     Bluepprint JSON:
     {
@@ -65,11 +30,46 @@ const quizQuestions = [
 
     */
 //####################################################################################################################################################################
-
+//TestQuestions:
+let quizQuestions = [
+    {
+        "id": 1,
+        "question": "Test?",
+        "answers": {
+            "a": "Test",
+            "b": "Test",
+            "c": "Test",
+            "d": "Fehler"
+        },
+        "rightAnswer": "a"
+    },
+    {
+        "id": 2,
+        "question": "Who am I?",
+        "answers": {
+            "a": "1",
+            "b": "2",
+            "c": "3",
+            "d": "4"
+        },
+        "rightAnswer": "a"
+    },
+    {
+        "id": 3,
+        "question": "Who Invented JS?",
+        "answers": {
+            "a": "A",
+            "b": "B",
+            "c": "C",
+            "d": "D"
+        },
+        "rightAnswer": "a"
+    }
+]
 //Object Quiz
- let Quiz = {
-
+let Quiz = {
     build: function(id = 1){
+
         let userAnswer;
         //Set the Question ID, So that the right Question will be shown
         this.qId = id;
@@ -142,3 +142,4 @@ const quizQuestions = [
 
 //Start the Function
 Quiz.build(1);
+
