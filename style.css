@@ -49,8 +49,6 @@ font-family: Arial, Helvetica, sans-serif;
   .flipper {
     transition: 2.0s;
     transform-style: preserve-3d;
-    border-style: solid;
-    border-color: purple;
     position: relative;
    
     
