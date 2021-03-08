@@ -130,12 +130,14 @@ let Quiz = {
         let urlParams =  new URLSearchParams(document.location.search.substring(1));
         let UserAnswer= urlParams.get("question");
         //Check for correctness
-        if(UserAnswer === currentQuestion.rightAnswer){
-            //What happens after the correct answer is given?
-            alert("Right Answer");
-        }else{
-            //What happens after a wrong anser is given?
-            alert("Wrong Answer");
+        if(UserAnswer){
+            if(UserAnswer === currentQuestion.rightAnswer){
+                //What happens after the correct answer is given?
+                alert("Right Answer");
+            }else{
+                //What happens after a wrong anser is given?
+                alert("Wrong Answer");
+            }
         }
     }
 };
