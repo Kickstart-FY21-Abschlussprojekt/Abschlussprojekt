@@ -38,13 +38,11 @@
             <div id="projektmanagement-back" class="back">
                 <div class="content2">Text</div>
             </div>
-        </div>
-    </div>
-
-    <div class="flip-container" onclick="this.classList.toggle('onclick');">
-        <div class="flipper">
-            <div id="testing" class="front">
-                <div class="content1">Testing</div>
+            
+            <div class="flip-container" onclick="this.classList.toggle('onclick');">
+                <div class="flipper">
+                    <div id="testing" class="front">
+                        <div class="content1">Testing</div>
             </div>
             <div id="testing-back" class="back">
                 <div class="content2">Text</div>
@@ -62,7 +60,7 @@
             </div>
         </div>
     </div>
-
+    
     <div class="flip-container" onclick="this.classList.toggle('onclick');">
         <div class="flipper">
             <div id="sE" class="front">
@@ -72,7 +70,29 @@
                 <div class="content2">Text</div>
             </div>
         </div>
+        
     </div>
+    <div class="kontakt-container">
+        <div class="headline-container">
+            <p id="title">Kontaktiere uns für weitere Infos 😊</p>
+            <p id="subtitle">Pflichtfelder (*) bitte angeben.</p>
+        </div>
+        <form>
+            <div class="kontakt-formular">
+                <div class="grid-beschreibung" id="grid-i1">Vorname</div>    
+                <div class="grid-beschreibung" id="grid-i2">Nachname</div>
+                <div class="grid-input" id="grid-i3"><input class="input" id="vorname" type="text"></div>
+                <div class="grid-input" id="grid-i4"><input class="input" id="nachname" type="text"></div>
+                <div class="grid-beschreibung" id="grid-i5">E-Mail *</div>
+                <div class="grid-beschreibung" id="grid-i6">Telefon</div>
+                <div class="grid-input" id="grid-i7"><input class="input" id="e-mail" type="text"></div>
+                <div class="grid-input" id="grid-i8"><input class="input" id="telefon" type="text"></div>
+                <div class="grid-beschreibung" id="grid-i9">Nachricht *</div>
+                <div class="grid-input" id="grid-i10"><textarea class="input" id="nachricht" type="text"></textarea></div>
+            </div>
+            <button type="button" id="btn">Absenden</button>
+        </form>
+        </div>
 </body>
 
 </html>
