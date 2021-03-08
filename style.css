@@ -17,7 +17,7 @@ h2 {
 .flip-container {
     perspective: 1000px;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 50px; 
   }
   .flip-container:active .flipper, .flip-container.onclick .flipper {
     transform: rotateY(-180deg);
@@ -34,29 +34,34 @@ h2 {
     transition: 2.0s;
     transform-style: preserve-3d;
     position: relative;
-    border: solid black;
+   
   }
   .front, .back {
     backface-visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
+    border: 5px solid black;
   }
   .front {
     z-index: 2;
     transform: rotateY(0deg);
-    background-image: url(http://www.mobirise-tutorials.com/LawyerM4-Tutorials/images/Spatzen-Vorne.jpg);
-    background-repeat: no-repeat;
-    background-image: opacity(0.2);
+    background-repeat: no-repeat; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .back {
     transform: rotateY(-180deg);
     background-image: url(http://www.mobirise-tutorials.com/LawyerM4-Tutorials/images/Spatz-Hinten.jpg);
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-div.content1 {
-    font-size: 100px;
+  .content1 {
+    font-size: 70px;
     width: inherit;
     height: 120px;
     margin: auto;
@@ -64,18 +69,59 @@ div.content1 {
     color: Black;
     background: transparent;
     text-align: center;
+    
   }
-  div.content2 {
+  .content2 {
     font-size: 12px;
     width: 150px;
     height: 120px;
     margin: 20px;
     padding: 10px;
-    color: White;
-    background: rgba(255, 255, 255, 0.4);
-    border: Solid 1px rgba(255, 255, 255, 0.75);
+    color: black;
+    background: transparent;
+    text-align: center;
   }
-  div.content2 a {
+  .content2 a {
     color: White;
     text-decoration: Underline;
+  }
+  #softskill {
+    background-image: ;
+    background-repeat: no-repeat;
+  }
+  #softskill-back {
+    background-image: ;
+    background-repeat: no-repeat;
+  }
+  #projektmanagement {
+    background-image: ;
+    background-repeat: no-repeat;
+  }
+  #projektmanagement-back {
+    background-image: ;
+    background-repeat: no-repeat;
+  }
+  #testing {
+    background-image: ;
+    background-repeat: no-repeat;
+  }
+  #testing-back {
+    background-image: ;
+    background-repeat: no-repeat;
+  }
+  #bA {
+    background-image: ;
+    background-repeat: no-repeat;
+  }
+  #bA-back {
+    background-image: ;
+    background-repeat: no-repeat;
+  }
+  #sE {
+    background-image: ;
+    background-repeat: no-repeat;
+  }
+  #sE-back {
+    background-image: ;
+    background-repeat: no-repeat;
   }
