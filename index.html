@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        
+        <textarea id="textbox" placeholder="Enter Text"></textarea>
+        <button id="submit_btn" onclick="submitClick()"></button>
+        <h1 id="question"></h1>
+        <h1 id="answer"></h1>
+
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+            https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+        
+        <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyBqLdKaS_sz3mFga0cw_10ltMVIxBQOEZ4",
+            authDomain: "testumgebung-6eb9d.firebaseapp.com",
+            projectId: "testumgebung-6eb9d",
+            storageBucket: "testumgebung-6eb9d.appspot.com",
+            messagingSenderId: "324794393827",
+            appId: "1:324794393827:web:7cdce89f6da22ef02651d6",
+            measurementId: "G-B52LTFD60W"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        var textOne = document.getElementById("textOne");
+        //var dbRef = firebase.database().ref().child("quiz_frage")
+        //dbRef.on('value', snap => textOne.innerText = snap.val())
+        firebase.database().ref('0/').once("value").then(function(snapshort) {
+            var question=snapshort.val().question;
+            var id = snapshort.val().id;
+            document.getElementById("question").innerHTML=question;
+        });
+
+        firebase.database().ref('0/answers').once("value").then(function(snapshort) {
+            var answer_1=snapshort.val().a;
+            var answer_2=snapshort.val().b;
+            var answer_3=snapshort.val().c;
+            var answer_4=snapshort.val().d;
+            document.getElementById("answer").innerHTML=answer_1;
+        });
+
+        </script>
+
+        <script src="index.js"></script>
+
+    </body>
+</html>
