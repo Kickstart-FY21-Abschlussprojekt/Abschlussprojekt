@@ -1,0 +1,38 @@
+h1 {
+    text-align: center;
+}
+.text1 {
+    grid-area: text1;
+    border: Solid black;
+    border-radius: 10px;
+    background-color: rgb(245, 227, 205);
+}
+.picture1 {
+    grid-area: picture1;
+    border: Solid black;
+    border-radius: 10px;
+}
+.text2 {
+    grid-area: text2;
+    border: Solid black;
+    border-radius: 10px;
+    background-color: rgb(245, 227, 205);
+}
+.picture2 {
+    grid-area: picture2;
+    border: Solid black;
+    border-radius: 10px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: 360px 360px;
+    grid-template-rows: 360px 360px;
+    grid-gap: 20px 40px;
+    grid-template-areas: 
+        "text1 picture1"
+        "picture2 text2";
+    width: 1000px;
+    justify-content: center;
+    justify-items: stretch;
+    
+}
