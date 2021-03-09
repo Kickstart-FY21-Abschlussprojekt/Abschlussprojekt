@@ -5,34 +5,38 @@ h1 {
     grid-area: text1;
     border: Solid black;
     border-radius: 10px;
-    background-color: rgb(245, 227, 205);
+    background-color: rgb(250, 238, 223);
+    padding: 5px;
+    font-size: small;
 }
 .picture1 {
     grid-area: picture1;
     border: Solid black;
-    border-radius: 10px;
+    border-radius: 13px;
 }
 .text2 {
     grid-area: text2;
     border: Solid black;
     border-radius: 10px;
-    background-color: rgb(245, 227, 205);
+    background-color: rgb(250, 238, 223);
+    padding: 5px;
+    font-size: small;
 }
 .picture2 {
     grid-area: picture2;
     border: Solid black;
-    border-radius: 10px;
+    border-radius: 13px;
 }
 .grid {
     display: grid;
     grid-template-columns: 360px 360px;
-    grid-template-rows: 360px 360px;
-    grid-gap: 20px 40px;
+    grid-template-rows: 220px 220px;
+    grid-gap: 20px 20px;
     grid-template-areas: 
         "text1 picture1"
         "picture2 text2";
     width: 1000px;
     justify-content: center;
     justify-items: stretch;
-    
+    margin: auto;
 }
