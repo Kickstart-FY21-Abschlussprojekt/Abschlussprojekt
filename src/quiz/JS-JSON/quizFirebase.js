@@ -4,10 +4,9 @@ let Quiz ={
         firebase.database().ref(`${this.qid}/`).once("value").then(function(sn) {
             var question=sn.val().question;
             var id = sn.val().id;
-            console.log("id: "+ id);
-            document.getElementById(`question:${id}`).innerHTML=question;
+            document.getElementById(`question`).innerHTML=question;
             let ans = [];
-            firebase.database().ref('1/answers').once("value").then(function(snapshort) {
+            firebase.database().ref(`${QID}/answers`).once("value").then(function(snapshort) {
                 snapshort.forEach(snap => {
                     let letter = snap.key;
                     let text = snap.val();
@@ -23,7 +22,7 @@ let Quiz ={
             });
         });
         Quiz.getUserAnswer();
-        Quiz.showResult();
+        Quiz.showResult(this.qid);
     },
     getUserAnswer: function(){
         //Getting the Value of the User Choosen Answer 
@@ -34,17 +33,19 @@ let Quiz ={
             };
         };  
     },
-    showResult: function(){
+    showResult: function(qid){
         //get final Entered Answer via URL
         let urlParams =  new URLSearchParams(document.location.search.substring(1));
-        let UserAnswer= urlParams.get(`q${this.qid}`);
-        firebase.database().ref(`${this.qid}/`).once("value").then(function(sn) {
+        let UserAnswer= urlParams.get(`q${qid}`);
+        firebase.database().ref(`${qid}/`).once("value").then(function(sn) {
             var rA=sn.val().rightAnswer;
             //Check for correctness
             if(UserAnswer){
                 if(UserAnswer == rA){
                     //What happens after the correct answer is given?
                     alert("Right Answer");
+                    Quiz.build(qid++);
+                    UserAnswer = "";
                 }else{
                     //What happens after a wrong anser is given?
                     alert("Wrong Answer");
