@@ -12,9 +12,11 @@ let Quiz ={
                     let letter = snap.key;
                     let text = snap.val();
                     ans.push(
-                        `<label>
+                        `<div name="answers">
+                        <label>
                             <input type="radio" id="choice${id}:${letter}" name="q${id}" value="${letter}">${text}</input>
-                        </label>`
+                        </label>
+                        </div>`
                     );
                 });
                 document.getElementById('quiz-options').innerHTML = ans.join('');

@@ -59,10 +59,12 @@ let Quiz = {
         const answers = [];
             for(letter in currentQuestion.answers){
                 answers.push(
-                `<label>
+                `<div>
+                <label>
                     <input type="radio" name="question" value="${letter}" 
                         id="question${this.qId}:${letter}">${currentQuestion.answers[letter]}</input>
-                </label>`
+                </label>
+                </div>`
                 );
             };
             output.push(

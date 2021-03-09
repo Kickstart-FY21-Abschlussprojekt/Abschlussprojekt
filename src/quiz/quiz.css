@@ -13,13 +13,22 @@ body{
    border: 1px solid #ccc;
 
 }
-.buttons{
-   justify-content: center;
+
+#quiz-options{
+
    display: grid;
+   grid-template-rows: auto auto auto auto;
+   text-align: justify;
+   row-gap: 30px;
+   padding: 20px 50px;
+   padding-bottom: 40px;
+   border-bottom: 1px solid #ccc;
+
+}
+
+.buttons{
    width: auto;
-   grid-template-columns:   80%;
-   column-gap: 100px;
-   margin: 10px 20px;
+   margin: 10px 10px;
 
 }
 
@@ -28,6 +37,11 @@ body{
    color: white;
    background-color: blueviolet;
    transition: 0.5s;
+
+}
+.btn-animated:focus{
+
+   outline: none !important;
 
 }
 
@@ -47,18 +61,12 @@ body{
    color: white;
    background-color: blueviolet;
    text-align: center;
+   align-content: flex-end;
    height: 50px;
    font-weight: bold;
    font-size: 25px;
    padding: auto;
    padding-top: 20px;
    margin-bottom: 20px;
-
-}
-
-#quiz-options{
-   text-align: center;
-   height: 200px;
-   border-bottom: 1px solid #ccc;
 
 }
