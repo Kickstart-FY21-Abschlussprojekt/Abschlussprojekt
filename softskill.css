@@ -39,6 +39,7 @@ h1 {
     justify-content: center;
     justify-items: stretch;
     margin: auto;
+    margin-top:10px;
 }
 
 body {
@@ -70,3 +71,69 @@ footer {
     text-align: center;
     padding-top: 10px;
   }
+
+ul {
+  list-style-type: none;
+  top:0px;
+  overflow: hidden;
+  background-color: whitesmoke;
+  box-shadow: 0 1px 3px 0 #000;
+  position: sticky;
+  width: 100%;
+  margin: 0;
+  padding: 0px 0px 0px 20px;
+}
+
+#navigationsleiste{
+  position: fixed;
+  width: 100%;
+  margin: 0px;
+  z-index: 100;
+}
+
+li {
+  margin:  12px 40px 12px 20px;
+  float: right;
+  top: 0px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.progress-container
+{
+  width: 100%;
+  height: 8px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.progress-bar{
+  height: 8px;
+  background: rgb(70,0,115);
+  background: linear-gradient(90deg, rgba(70,0,115,1) 0%, rgba(117,0,192,1) 50%, rgba(161,0,255,1) 100%);
+  width: 0%;
+
+}
+
+li a:hover {
+  background-color: #e5e5e5;
+}
+
+*
+{
+  margin:0;
+  padding-top: 0;
+}
+
+.container1{
+  margin: auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
