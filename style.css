@@ -4,6 +4,108 @@ padding: 0;
 font-family: Arial, Helvetica, sans-serif;
 }
 
+ul {
+  list-style-type: none;
+  top:0px;
+  overflow: hidden;
+  background-color: whitesmoke;
+  box-shadow: 0 1px 3px 0 #000;
+  position: sticky;
+  width: 100%;
+  margin: 0;
+  padding: 0px 0px 0px 20px;
+}
+
+#navigationsleiste{
+  position: fixed;
+  width: 100%;
+  margin: 0px;
+  z-index: 100;
+}
+
+li {
+  margin:  12px 40px 12px 20px;
+  float: right;
+  top: 0px;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.progress-container
+{
+  width: 100%;
+  height: 8px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.progress-bar{
+  height: 8px;
+  background: rgb(70,0,115);
+  background: linear-gradient(90deg, rgba(70,0,115,1) 0%, rgba(117,0,192,1) 50%, rgba(161,0,255,1) 100%);
+  width: 0%;
+
+}
+
+li a:hover {
+  background-color: #e5e5e5;
+}
+
+*
+{
+  margin:0;
+  padding-top: 0;
+}
+
+.btn{
+  
+  background-color: rgb(161,0,255);
+  background: radial-gradient(circle, rgba(161,0,255,1) 0% ,   rgba(117,0,192,1) 100%);
+  border-style: solid;
+  border-width: small;
+  border-color: black;
+  padding: 12px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 3%;
+  right: 1%;
+  
+}
+
+.btn:hover{
+  background-color: #a055f5;
+}
+
+
+p{
+  margin: auto;
+  padding-top: 80px;
+  width: 600px;
+}
+
+h1 { 
+  background-image: url(accenture1.jpg); 
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  margin-top: 50px; 
+  margin-bottom: -50px;
+  font-size: 120px; 
+  text-align: center; 
+  font-weight: bold; 
+  text-transform: uppercase; 
+  font-weight: 800; 
+  -webkit-font-smoothing: antialiased; 
+} 
+
 .kontakt-container{
 
   width: 50%;
@@ -86,8 +188,7 @@ font-family: Arial, Helvetica, sans-serif;
     height: 120px;
     margin: auto;
     padding: 10px;
-    color: rgb(235, 222, 222);
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: rgb(235, 222, 222);;
     background: transparent;
     text-align: center;
     
