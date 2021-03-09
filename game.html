@@ -5,11 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="game.css" type="text/css">
-    <script src="game.js" async></script>
+    <script src="game2.js" async></script>
     <title>Game</title>
 </head>
-<body>
-    <canvas id="myCanvas" width="500" height="500"></canvas>
+<body onload="startGame()">
+    <img img id="accman" src="acc_man.PNG" style="display: none;">
+    <button id="up" onmousedown="moveup()" onmouseup="clearmove()">UP</button>
+    <button id="left" onmousedown="moveleft()" onmouseup="clearmove()">LEFT</button>
+    <button id="right" onmousedown="moveright()" onmouseup="clearmove()">RIGHT</button>
+    <button id="down" onmousedown="movedown()" onmouseup="clearmove()">DOWN</button>
 
 </body>
 </html>
