@@ -34,6 +34,7 @@ let Quiz ={
         };  
     },
     showResult: function(qid){
+        alert("I'm here")
         //get final Entered Answer via URL
         let urlParams =  new URLSearchParams(document.location.search.substring(1));
         let UserAnswer= urlParams.get(`q${qid}`);
@@ -43,9 +44,7 @@ let Quiz ={
             if(UserAnswer){
                 if(UserAnswer == rA){
                     //What happens after the correct answer is given?
-                    alert("Right Answer");
-                    Quiz.build(qid++);
-                    UserAnswer = "";
+                    Quiz.build(qid++); 
                 }else{
                     //What happens after a wrong anser is given?
                     alert("Wrong Answer");
