@@ -1,4 +1,4 @@
-[
+/* [
     {
         "id": 1,
         "question": "Test?",
@@ -67,4 +67,4 @@ let quizQuestions = [
         },
         "rightAnswer": "a"
     }
-]
+] */

@@ -31,7 +31,7 @@ let Quiz ={
                asnwer[i].onclick = function() {
                return asnwer.value;
             };
-        };  
+        }  
     },
     showResult: function(qid){
         //get final Entered Answer via URL
@@ -51,7 +51,40 @@ let Quiz ={
                     alert("Wrong Answer");
                 }
             }
+            //Update Global Scoreboard
+            Quiz.globalScore((UserAnswer == rA));
         });
 
+    },
+    globalScore: function(correctAnswer){
+        
+        const questionsPerQuiz = 1;
+         //Abrufen, addieren und hinzufügen der Statistiken
+      firebase.database().ref("question").get().then( function(snapshot) {
+        if (snapshot.exists()) {
+          console.log(snapshot.val());
+          var data = snapshot.val();
+          var globalCountCorrect;
+
+          if (correctAnswer) {
+            globalCountCorrect = data.questionsCorrect + 1;
+          }
+          else {
+            globalCountCorrect = data.questionsCorrect + 0;
+          }
+          var globalCountQuestion = data.questionsAll + 1;
+          var globalPeopleCount = globalQuestionCount/questionsPerQuiz;
+
+          firebase.database().ref('question').set(
+            {
+            questionsCorrect: globalCountCorrect,
+            questionsAll: globalCountQuestion,
+            questionsAverage: globalCountCorrect/globalPeopleCount
+            }
+          );
+        }
+        else {
+          console.log("No data available");
+        }});
     }
 }
