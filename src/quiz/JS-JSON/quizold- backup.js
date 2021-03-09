@@ -30,84 +30,53 @@
 
     */
 //####################################################################################################################################################################
-//TestQuestions:
-let quizQuestions = [
-    {
-        "id": 1,
-        "question": "Test?",
-        "answers": {
-            "a": "Test",
-            "b": "Test",
-            "c": "Test",
-            "d": "Fehler"
-        },
-        "rightAnswer": "a"
-    },
-    {
-        "id": 2,
-        "question": "Who am I?",
-        "answers": {
-            "a": "1",
-            "b": "2",
-            "c": "3",
-            "d": "4"
-        },
-        "rightAnswer": "a"
-    },
-    {
-        "id": 3,
-        "question": "Who Invented JS?",
-        "answers": {
-            "a": "A",
-            "b": "B",
-            "c": "C",
-            "d": "D"
-        },
-        "rightAnswer": "a"
-    }
-]
+function laodall(){
+    let Questions = firebase.database().ref('/').once("value").then(function(snapshort) {
+        var question=snapshort.toJSON();
+        console.log(question);
+        return question;});
+    return Questions}
+
+
 //Object Quiz
 let Quiz = {
     build: function(id = 1){
-
         let userAnswer;
         //Set the Question ID, So that the right Question will be shown
         this.qId = id;
-
-        //Read the external JSON -File --> All Question are availible
-
-
+        let currentQuestion = getcurrentQuestion(this.qId);
         //get the right question 
         function getcurrentQuestion(qId){
             currentID = qId;
-            let question = quizQuestions.find(q => q.id == currentID);
-            return question;
+           currentquestion = quizQuestions.find(q => q.id == currentID);
+           console.log(currentQuestion);
+            return currentquestion;
         }
-        let currentQuestion = getcurrentQuestion(this.qId);
 
         //Build the HTML FORM
+        function subBuild(){
         const output = [];
         const answers = [];
             for(letter in currentQuestion.answers){
                 answers.push(
                 `<label>
                     <input type="radio" name="question" value="${letter}" 
-                        id="question${currentQuestion.id}:${letter}"> ${currentQuestion.answers[letter]}</input>
+                        id="question${this.qId}:${letter}">${currentQuestion.answers[letter]}</input>
                 </label>`
                 );
             };
             output.push(
                 `
-                <div class="question"> ${currentQuestion.question} </div>
+                <div class="question" id= "question:${this.qId}"> ${currentQuestion.question} </div>
                 <div class="answers"> ${answers.join()}</div>
-                <div class="submitBtn"><button id="submit:${currentQuestion.id}">Submit Quiz</button>
-                <div class="result"></div>
+                <div class="submitBtn"><button id="submit:${this.qId}">Submit Quiz</button>
+                <div class="result"><;/div>
                 `
             );
+            return output.join(',');
+        };
         //Creating the Quiz HTML
-        const quiz = document.getElementById(`quiz:${currentQuestion.id}`);
-        quiz.innerHTML = output.join('');
-
+        document.getElementById(`quiz:${currentQuestion.id}`).innerHTML = subBuild(); 
         //Adding the Attributes for Function
         const submitButton = document.getElementById(`submit:${currentQuestion.id}`);
         //activate the Radio buttons for final Answering the Questions
@@ -118,8 +87,7 @@ let Quiz = {
         //Getting the Value of the User Choosen Answer 
         var asnwer = document.forms['quiz'].elements['question']; 
         for (var i = 0; i < asnwer.length; i++) {
-            asnwer[i].onclick = function() {
-                console.log(asnwer.value); 
+               asnwer[i].onclick = function() {
                return asnwer.value;
             };
         };
