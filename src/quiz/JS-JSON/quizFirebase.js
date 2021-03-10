@@ -57,7 +57,7 @@ let Quiz ={
             
     },
     globalScore: function(correctAnswer){    
-        const questionsPerQuiz = 1;
+        const questionsPerQuiz = 6;
          //Abrufen, addieren und hinzufügen der Statistiken
         firebase.database().ref("0/").get().then( function(snapshot) {
             if (snapshot.exists()) {
