@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz-Test Object</title>
+    <link rel="stylesheet" href="/src/quiz/quiz.css">
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+    <script src="/src/quiz/JS-JSON/quizFirebase.js" async></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBqLdKaS_sz3mFga0cw_10ltMVIxBQOEZ4",
+            authDomain: "testumgebung-6eb9d.firebaseapp.com",
+            projectId: "testumgebung-6eb9d",
+            storageBucket: "testumgebung-6eb9d.appspot.com",
+            messagingSenderId: "324794393827",
+            appId: "1:324794393827:web:7cdce89f6da22ef02651d6",
+            measurementId: "G-B52LTFD60W"
+        };
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+
+</head>
+<body>
+    <form id="quiz:1" name="quiz">
+        <div class="frage", id="question:1"></div>
+        <div id="quiz-options:1"></div>
+        <div class="buttons">
+            <button id="submit-btn" class="btn-animated" onclick="Quiz.showResult(1)">Submit</button>
+        </div>
+    </form>
+</body>
+</html>
