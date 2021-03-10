@@ -176,7 +176,6 @@ h1 {
     top: 0;
     left: 0;
     border: 5px solid black;
-    border-radius: 50px;
   }
   .front {
     z-index: 2;
