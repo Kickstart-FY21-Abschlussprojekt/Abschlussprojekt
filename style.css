@@ -99,7 +99,7 @@ p{
 }
 
 h1 { 
-  background-image: url(accenture1.jpg); 
+  background-image: url(/res/accenture1.jpg); 
   background-repeat: repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
@@ -219,20 +219,20 @@ h1 {
     text-decoration: Underline;
   }
   #softskill {
-    background-image: url(Front2.jpg);
+    background-image: url(/res/Front2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     
   }
   #softskill-back {
-    background-image:url(pexels-soumil-kumar-735911.jpg) ;
+    background-image:url(/res/pexels-soumil-kumar-735911.jpg) ;
     background-repeat: no-repeat;
     background-size: cover;
     
     
   }
   #projektmanagement {
-    background-image:url(Front4.jpg) ;
+    background-image:url(/res/Front4.jpg) ;
     background-repeat: no-repeat;
     background-size: cover ;
   }
@@ -243,35 +243,35 @@ h1 {
     
   }
   #testing {
-    background-image: url(Front6.png);
+    background-image: url(/res/Front6.png);
     background-repeat: no-repeat;
     background-size: cover;
   }
   #testing-back {
-    background-image: url(pexels-thisisengineering-3862632\ \(1\).jpg);
+    background-image: url(/res/pexels-thisisengineering-3862632\ \(1\).jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
   #bA {
-    background-image: url(Front5.jpg);
+    background-image: url(/res/Front5.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     
 
   }
   #bA-back {
-    background-image: url(pexels-fauxels-3183153.jpg);
+    background-image: url(/res/pexels-fauxels-3183153.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     
   }
   #sE {
-    background-image: url(Front.jpg);
+    background-image: url(/res/Front.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
   #sE-back {
-    background-image: url(pexels-luis-gomes-546819.jpg);
+    background-image: url(/res/pexels-luis-gomes-546819.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     
