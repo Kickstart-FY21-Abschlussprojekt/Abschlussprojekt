@@ -72,13 +72,13 @@ let Quiz ={
                 globalCountCorrect = data.questionsCorrect + 0;
                   }
               var globalCountQuestion = data.questionsAll + 1;
-              var globalPeopleCount = globalQuestionCount/questionsPerQuiz;
+              var globalCountPeople = globalCountQuestion/questionsPerQuiz;
             
               firebase.database().ref('question').set(
                 {
                 questionsCorrect: globalCountCorrect,
                 questionsAll: globalCountQuestion,
-                questionsAverage: globalCountCorrect/globalPeopleCount
+                questionsAverage: globalCountCorrect/globaCountPeople
                     }
                   );
                 }
