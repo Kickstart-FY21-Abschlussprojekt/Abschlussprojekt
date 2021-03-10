@@ -139,7 +139,11 @@ h1 {
   text-transform: uppercase; 
   font-weight: 800; 
   -webkit-font-smoothing: antialiased; 
-} 
+}
+
+.container{
+  text-align:justify;
+}
 
 .kontakt-container{
 
@@ -199,7 +203,7 @@ h1 {
     top: 0;
     left: 0;
     border: 5px solid black;
-    border-radius: 20px;
+    border-radius: 50px;
   }
   .front {
     z-index: 2;
@@ -230,14 +234,13 @@ h1 {
     
   }
   .content2 {
-    font-size: 12px;
-    width: 150px;
+    font-size: 14px;
+    width: 420px;
     height: 120px;
     margin: auto;
-    padding: 10px;
-    color: rgb(7, 7, 7);
-    background: transparent;
-    text-align: center;
+    color: black;
+    text-align:justify;
+    
   }
   .content2 a {
     color: White;
@@ -254,7 +257,7 @@ h1 {
     background-repeat: no-repeat;
     background-size: cover;
     
-    opacity: 0.6;
+    
   }
   #projektmanagement {
     background-image:url(Front4.jpg) ;
@@ -265,7 +268,7 @@ h1 {
     background-image: url(pexels-lukas-669615\ \(1\).jpg);
     background-repeat: no-repeat;
     background-size: cover ;
-    opacity: 0.3;
+    
   }
   #testing {
     background-image: url(Front6.png);
@@ -273,9 +276,8 @@ h1 {
     background-size: cover;
   }
   #testing-back {
-    background-image: url(pexels-thisisengineering-3862632.png);
+    background-image: url(pexels-thisisengineering-3862632\ \(1\).jpg);
     background-repeat: no-repeat;
-    opacity: 0.4;
     background-size: cover;
   }
   #bA {
@@ -289,7 +291,7 @@ h1 {
     background-image: url(pexels-fauxels-3183153.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.4
+    
   }
   #sE {
     background-image: url(Front.jpg);
@@ -300,7 +302,7 @@ h1 {
     background-image: url(pexels-luis-gomes-546819.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.4;
+    
 
   }
 
