@@ -106,8 +106,10 @@ h1 {
     justify-content: center;
     backface-visibility: hidden;
     transform-style: preserve-3d;
+    transition: transform .5s;
+    transform: scale(1);
 }
-.card.flip {
+.flip {
     transform: rotateY(180deg);
 }
 .quiz {
