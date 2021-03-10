@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    ul {
+      list-style-type: none;
+      top:0px;
+      overflow: hidden;
+      background-color: whitesmoke;
+      box-shadow: 0 1px 3px 0 #000;
+      position: sticky;
+      width: 100%;
+      margin: 0;
+      padding: 0px 0px 0px 20px;
+    }
+    
+    #navigationsleiste{
+      position: fixed;
+      width: 100%;
+      margin: 0px;
+      z-index: 100;
+    }
+    
+    li {
+      margin:  12px 40px 12px 20px;
+      float: right;
+      top: 0px;
+    }
+    
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+      li a:hover {
+        background-color: #e5e5e5;
+      }
+    
+    .progress-container
+    {
+      width: 100%;
+      height: 8px;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+    
+    .progress-bar{
+      height: 8px;
+      background: rgb(70,0,115);
+      background: linear-gradient(90deg, rgba(70,0,115,1) 0%, rgba(117,0,192,1) 50%, rgba(161,0,255,1) 100%);
+      width: 0%;
+    
+    }
+h1 {
+    text-align: center;
+}
+#content {
+    grid-area: text1;
+    border: Solid black;
+    border-radius: 10px;
+    background-color: rgb(250, 238, 223);
+    padding: 5px;
+    font-size: small;
+}
+#picture {
+    grid-area: picture1;
+    border: Solid black;
+    border-radius: 13px;
+}
+#content2 {
+    grid-area: text2;
+    border: Solid black;
+    border-radius: 10px;
+    background-color: rgb(250, 238, 223);
+    padding: 5px;
+    font-size: small;
+}
+#picture2 {
+    grid-area: picture2;
+    border: Solid black;
+    border-radius: 13px;
+}
+.container {
+    display: grid;
+    grid-template-columns: 360px 360px;
+    grid-template-rows: 220px 220px;
+    grid-gap: 20px 20px;
+    grid-template-areas: 
+        "picture1 text1"
+        "text2 picture2";
+    width: 1000px;
+    justify-content: center;
+    justify-items: stretch;
+    margin: auto;
+}
+.card {
+    perspective: 600px;
+    position: relative;
+}
+.active {
+    transform: rotateY(180deg);
+}
+.quiz {
+    width: 100%;
+}
+.content-back {
+    transform: rotateY(180deg);
+}
+    
+
+ 
