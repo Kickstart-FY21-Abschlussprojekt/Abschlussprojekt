@@ -1,6 +1,53 @@
-#myCanvas{
+#buttons-container{
 
+float: left;
+margin: 160px 50px;
+
+}
+
+.button{
+
+    width: 80px;
+    height: 50px;
+    margin:10px;
+    text-align: center;
+}
+
+#up{
+
+margin-left: 100px;
+
+}
+
+#down{
+
+    margin-left: 100px;
+}
+
+#right{
+
+    margin-left: 87.5px;
+}
+
+#restart{
+
+    clear: both;
+}
+.hidden{
+
+display: none;
+
+}
+
+.formatierung{
+
+    float:left;
     border: 1px solid black;
-    margin: 10px auto 10px auto;
+    margin-bottom: 0;
+    
+}
 
+#info{
+
+    float: left;
 }
