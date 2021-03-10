@@ -415,6 +415,9 @@ footer {
   .listItem.active,.listItem:hover{
     background: #e5e5e5;
     transition: .5s;
+  }  
+  h1{
+    font-size: 90px;
   }
   .content1{
     font-size: 60px;
@@ -457,6 +460,12 @@ footer {
   }
   .flip-container{
     width: 90%;
+  }
+  h1{
+    font-size: 80px;
+  }
+  p{
+    font-size: 14px;
   }
   .content1{
     font-size: 50px;
