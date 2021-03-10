@@ -38,35 +38,41 @@
     <div class="container">
         <h1>Kickstart</h1>
         <p>        
-            “[…] a super small group of developers and I got together to design and build a new internal tool and saw an opportunity to do something more. Through that process, we saw ourselves build something much more substantial than another internal tool. Months later, we ended up with an early version of Bootstrap as a way to document and share common design patterns and assets within the company.”
-            „[…] eine sehr kleine Gruppe von Entwicklern und ich haben uns zusammengesetzt, um ein neues internes Werkzeug zu gestalten und sahen dabei die Möglichkeit, mehr daraus zu machen. Während des Prozesses stellten wir fest, dass wir dabei waren, etwas zu erschaffen, was wesentlich weitreichender war als nur ein weiteres internes Werkzeug. Monate später hielten wir eine frühe Version von Bootstrap in den Händen, welche allgemeine Entwurfsmuster und Erkenntnisse innerhalb der Firma dokumentierte.“
-            – Mark Otto: In seinem persönlichen Blog zur Entwicklung von Bootstrap.[4]
-            Dabei spielt laut Aussage von Otto die Idee, Designer und Entwickler zusammenzubringen, eine elementare Rolle bei der Entwicklung: „From whiteboarding ideas to coding rough prototypes, collaborating across disciplines is what made Bootstrap successful for internal use at Twitter.“[5], („Vom Skizzieren von Ideen bis hin zur Programmierung grober Prototypen war es die interdisziplinäre Zusammenarbeit, die Bootstrap für die interne Nutzung bei Twitter so erfolgreich gemacht hat“).
-            Der Name Bootstrap entlehnt sich von der Geschichte des Hieronymus Carl Friedrich von Münchhausen, auch bekannt als „Baron Münchhausen“, der unter anderem die Lügengeschichte auftischte, dass er sich an den eigenen Haaren aus einen Sumpf zöge (strap), wobei statt eines Haars ein Stiefel (boot) eingesetzt wird, was es auch als englischsprachiges Sprichwort gibt.[6] Da das Bootstrapframework die Basis ist, auf dem andere Teile der Webseite aufbauen, wird so der sachliche Zusammenhang hergestellt (vgl. Bootstrapping (Informatik)).
-            Den ersten Einsatz unter realen Bedingungen erfuhr Bootstrap auf Twitters erster Hackweek.[Anmerkung 1] Otto zeigte einigen Kollegen, wie sie die Entwicklung ihrer Projekte mit Hilfe des Toolkits beschleunigen können. Bei der Präsentation der Ergebnisse zeigte sich, dass Dutzende Teams auf das Framework zurückgegriffen hatten. Auf diese Weise trug Bootstrap nicht nur dazu bei, die Entwicklungszeit zu verkürzen, sondern auch ohne Hilfestellung eines dedizierten Designers ein einheitliches Look-and-Feel für die in der Hackweek entstandenen Anwendungen zu erzeugen.[5]
-            Im August 2011 entschloss sich Twitter, die Ergebnisse der Öffentlichkeit als Open-Source-Projekt zur Verfügung zu stellen.[3] Seitdem hat sich Bootstrap mit ≈71.000 Forks, ≈145.000 Likes und über ≈7.100 Beobachtern zu einem populären GitHub-Projekt entwickelt (Stand: November 2020).[7]
-            Eigenschaften
-            Bootstrap wurde mit Unterstützung für das damals noch relativ junge HTML5 und CSS 3 entwickelt. Da Bootstrap ab Version 3 weder Firefox 3.6 noch den Internet Explorer 7 unterstützt, wird in einem Übergangszeitraum weiterhin auch Version 2 aktualisiert. Der Gewährleistung der Browser-Kompatibilität dient das Konzept der progressiven Verbesserung.[8] Das bedeutet, dass die grundlegenden Informationen der Webseite oder -anwendung für alle Geräte und Browser zugänglich sind, erweiterte Funktionalitäten jedoch nur den Geräten und Browsern zur Verfügung stehen, die diese unterstützen. Deutlich wird dies beispielsweise bei den in CSS 3 eingeführten Eigenschaften für abgerundete Ecken, Farbverläufe und Schatten. Diese werden von Bootstrap trotz der mangelnden Unterstützung durch ältere Webbrowser intensiv eingesetzt. Dabei gewährleistet der semantische Einsatz von HTML und die Implementierung von alternativen Stildefinitionen in den Stylesheets, dass die Informationen und Funktionen der Webseite trotz der fehlenden Funktionalitäten bei älteren Browsern zur Verfügung stehen. Gleiches gilt für die mitgelieferten JavaScript-Komponenten. Diese erweitern den Funktionsumfang des Toolkits, sind jedoch keine Voraussetzung für dessen Einsatz.
-            Ab Version 2.0 unterstützt Bootstrap zudem die Gestaltung im Sinne des Responsive Webdesigns.[9][8] Das bedeutet, der grafische Aufbau von Webseiten erfolgt dynamisch und unter Berücksichtigung der Eigenschaften, die das verwendete Gerät (PC, Tablet, Mobiltelefon) mit sich bringt. So passen sich angeordnete Elemente automatisch der Bildschirmauflösung bzw. Fenstergröße an.
-            Bootstrap wird als Open-Source-Bibliothek angeboten und auf GitHub bereitgestellt. Entwickler sind aufgerufen, sich an dem Projekt zu beteiligen, und können auf der Plattform eigene Beiträge leisten.
-            Aufbau und Funktionsweise
-            Bootstrap ist modular aufgebaut und besteht im Kern aus Sass-Stylesheets, welche die einzelnen Komponenten des Frameworks enthalten. Diese Einzelkomponenten werden von einer zentralen bootstrap-Datei zusammengeführt.[10] Durch diesen Aufbau kann der Entwickler durch Anpassung der bootstrap-Datei selbst entscheiden, welche Komponenten in seinem Projekt verwendet werden.
-            Anpassungen sind in eingeschränktem Umfang über ein zentrales Konfigurationsstylesheet möglich. Darin werden unter anderem Angaben zu Schriftart und -größe, Farbe oder dem Aufbau des Grid-Layouts gesetzt.[11] Tiefgreifendere Änderungen sind möglich, indem die Sass-Deklarationen von Bootstrap überschrieben werden.
-            Ab der Version 2.0 ist die Konfiguration von Bootstrap auch über eine spezielle „Customize“-Option in der Dokumentation möglich. Dabei wählt der Entwickler über ein Formular die gewünschten Komponenten und passt ggf. die Werte verschiedener Optionen seinen Bedürfnissen an. Das anschließend erzeugte Paket enthält bereits das fertig kompilierte CSS-Stylesheet.[12]
-            Grundgerüst: Grid-System und Responsive Webdesign
-            Bootstrap wird standardmäßig mit einem 940 Pixel breiten, zwölfspaltigen Grid-Layout ausgeliefert. Alternativ kann der Entwickler auch ein Layout mit variabler Breite verwenden. Für beide Fälle bietet das Toolkit vier Variationen im Sinne des Responsive Webdesigns an, welche verschiedene Auflösungen und Gerätetypen bedienen: Mobiltelefone, hoch- und querformatige Tablets, sowie PCs mit geringer und hoher (Widescreen-)Auflösung. Dabei passt sich die Breite der Spalten automatisch der zur Verfügung stehenden Fensterbreite an.[13]
-            Über das Konfigurationsstylesheet hat der Entwickler die Möglichkeit, die Anzahl und Breite der Spalten, den Abstand zwischen den Spalten sowie die Gesamtbreite des Layouts seinen Vorstellungen entsprechend anzupassen.[11]
-            Mit Release 4 ist das Grid-System an das CSS-Flexbox-System[14] angepasst worden, um sich flexibler an die bestehende Fenstergröße anzupassen: Das Grundprinzip des zwölfspaltigen Rasters wurde in Bootstrap 4 beibehalten, und das responsive Raster auf fünf Viewport-Breiten verfeinert. Wurde das Raster in Bootstrap 3 im Wesentlichen noch mit der CSS-Eigenschaft float realisiert, die nie fü
-        </p>
+            <b><big>Hallo Du!</big></b> Es freut uns, dass es Dich hierhergeführt hat. Du interessierst dich für ein duales Studium bei Accenture und möchtest wissen, was dich die ersten Wochen in deiner Praxisphase erwartet? Dann bist Du hier genau richtig!</br></br>
+
+            Auf dieser Seite erhältst Du einen Gesamtüberblick über den Accenture Kickstart! 
+            Der Kickstart ist ein Programm von Accenture, das den dualen Studenten ermöglicht, grundlegende Kenntnisse und Fähigkeiten zu erwerben, bevor es für Dich auf dein erstes Projekt bei einem unserer Kunden geht!</br></br>
+            
+            In einem Zeitraum von 7 Wochen lernst Du Accenture als Arbeitgeber besser kennen und setzt dich anschließend mit spannenden Themen auseinander, die Dir auf deinem Projekt begegnen können oder Dich generell auf das Projekt und deine Arbeit bei Accenture vorbereiten.</br></br> 
+            
+            
+           <u> Zu den folgenden Themen:</u></br> </br></br>
+            
+            <a style="color:black; font-size: 15px;font-weight: bold; "href="#softskill">-	Softskills </a></br>
+            <a style="color:black; font-size: 15px;font-weight: bold; "href="#projektmanagement" > - Projektmanagement</a></br>
+            <a  style="color:black; font-size: 15px;font-weight: bold; "href="#testing" >- Testing </a></br>
+            <a style="color:black; font-size: 15px;font-weight: bold; "href="#bA">-	Business Analyse</a> </br>
+            <a style="color:black; font-size: 15px;font-weight: bold; "href="#sE"> -	Software Engineering</a></br><br>
+            
+            
+            durchläufst Du abwechslungsreiche Trainings mit ausgebildeten Trainern von Accenture und lernst dabei neue Mitarbeiter kennen!</br>
+            Außerdem hast Du die Möglichkeit, dir auch selbstständig und in Gruppen Themen zu erarbeiten und Experte darin zu werden. Spannende und herausfordernde Aufgaben warten auf Dich!</br></br>
+            
+            Damit Du vorab weißt, was auf dich zukommt und was sich hinter diesen Themen verbirgt, kannst du hier schon einiges über die Kickstart Themen erfahren und lernen. Und zu jedem Thema, jeweils dein Wissen testen, das Du bereits erlangt hast. Wir wünschen Dir viel Spaß!
+            
+        </p>            
     </div>
 
     <div class="flip-container" onclick="this.classList.toggle('onclick');">
         <div class="flipper">
             <div id="softskill" class="front">
-                <div  class="content1">Softskill</div>
+                <div  class="content1">Softskills</div>
             </div>
             <div id="softskill-back" class="back">
-                <div class="content2">Text</div>
+                <div class="content2">Du möchtest erfolgreich in einem Unternehmen arbeiten? Hierzu sind einige Kompetenzen erforderlich, die Du im Kickstart erlernen wirst. 
+                    Neben Methodischen Kompetenzen im Bereich Planung und Präsentation, wird vor allem Wert auf ausgeprägte persönliche und soziale Kompetenzen gelegt. Du setzt dich mit Themen wie <b>Konfliktmanagement, Kommunikationsfähigkeit,</br> Stressresistenz</b> und Vielem mehr auseinander
+                    und lernst dich dabei selbst besser kennen. <b>Schau doch mal hier vorbei!</b>
+                    </div>
             </div>
         </div>
     </div>
@@ -77,7 +83,10 @@
                 <div  class="content1">Projektmanagement</div>
             </div>
             <div id="projektmanagement-back" class="back">
-                <div class="content2">Text</div>
+                <div class="content2">Du willst wissen, wie wir auf unseren Projekten arbeiten?</br>
+                    Und was man genau unter dem <b>Wasserfall Modell</b> oder einem Framework wie <b>„SCRUM“</b> versteht 
+                    und welche Rollen sie dabei spielen? <b>Dann informiere Dich hier</b> und erfahre zudem,</br> welche Tools wir dabei verwenden!
+                    </div>
             </div>
         </div>
     </div>
@@ -88,7 +97,10 @@
                 <div class="content1">Testing</div>
             </div>
             <div id="testing-back" class="back">
-                <div class="content2">Text</div>
+                <div class="content2">Du wolltest schon immer erfahren, wie wir die Qualität für unsere Kunden gewährleisten können?</br>
+                    Das <b>Testing</b> spielt dabei eine ganz wichtige Rolle, indem es z.B. Fehler im Code aufdeckt und behebt.</br>
+                    <b>Erfahre hier mehr über den ganzen Testing-Prozess!</b>
+                    </div>
             </div>
         </div>
     </div>
@@ -99,7 +111,10 @@
                 <div class="content1">Business Analyse</div>
             </div>
             <div id="bA-back" class="back">
-                <div class="content2">Text</div>
+                <div class="content2">Accenture ist es sehr wichtig, so eng wie möglich mit den Kunden zusammenzuarbeiten und gemeinsam Ideen zu realisieren.</br> 
+                    Das Ganze funktioniert nicht ohne die <b>Business Analyse</b>, in der zunächst der Bedarf des Kunden ermittelt wird, Lösungsansätze besprochen werden und letztlich eine Veränderung umgesetzt wird.</br> 
+                    Du möchtest mehr Details zur Business Analyse? <b>Dann informiere Dich jetzt!</b>
+                    </div>
             </div>
         </div>
     </div>
@@ -110,7 +125,12 @@
                 <div class="content1">Software Engineering</div>
             </div>
             <div id="sE-back" class="back">
-                <div class="content2">Text</div>
+                <div class="content2">Du hast genug von Theorie und möchtest endlich in die Praxis?</br>
+                     Beim <b>Software Engineering</b> gehts ans Eingemachte! Du lernst verschiedene Programmiersprachen wie <b>"Java"</b> kennen und wendest sie zur Umsetzung interessanter Aufgaben an.</br>
+                      Dabei kannst du beispielsweise in der <b>Web Entwicklung</b>, in der <b>Front- oder der Backend-Entwicklung</b> tätig sein.
+                    <b>Informiere Dich hier</b> über die ersten Grundlagen einer Programmiersprache und wo Du damit arbeiten kannst!
+
+                </div>
             </div>
         </div>
         
