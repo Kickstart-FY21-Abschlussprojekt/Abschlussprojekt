@@ -3,33 +3,31 @@ h1 {
 }
 .text1 {
     grid-area: text1;
-    border: Solid black;
-    border-radius: 10px;
-    background: rgb(220,175,255);
-    background: radial-gradient(circle, rgba(220,175,255,0.5) 0%, rgba(190,130,255,1) 100%);
+    border: 2px Solid black;
+    background: rgb(70,0,115);
+    background: linear-gradient(90deg, rgba(70,0,115,1) 0%, rgba(117,0,192,1) 100%);
     padding: 5px;
+    color:white;
     font-size: large;
     text-align:center;
 }
 .picture1 {
     grid-area: picture1;
-    border: Solid black;
-    border-radius: 13px;
+    border: 2px Solid black;
 }
 .text2 {
     grid-area: text2;
-    border: Solid black;
-    border-radius: 10px;
-    background: rgb(220,175,255);
-    background: radial-gradient(circle, rgba(220,175,255,0.5) 0%, rgba(190,130,255,1) 100%);
+    border: 2px Solid black;
+    background: rgb(70,0,115);
+    background: linear-gradient(90deg, rgba(70,0,115,1) 0%, rgba(117,0,192,1) 100%);
     padding: 5px;
     font-size: large;
+    color:white;
     text-align:center;
 }
 .picture2 {
     grid-area: picture2;
-    border: Solid black;
-    border-radius: 13px;
+    border: 2px Solid black;
 }
 .grid {
     display: grid;
@@ -140,4 +138,33 @@ li a:hover {
   margin: auto;
   padding-top: 80px;
   padding-bottom: 80px;
+}
+
+p{
+  text-align:center;
+  text-align: justify;
+  text-justify:auto;
+  width:600px;
+  margin:auto;
+  margin-top:30px;
+  background-color: #fbfbfb;
+}
+
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2{
+  text-align:center;
+  text-justify:auto;
+  width:600px;
+  margin:auto;
+  margin-top:30px;
+  color:#7500c0;
+}
+
+#pic{
+  width:100%;
+  margin-top:30px;
+  margin-bottom:30px;
 }
