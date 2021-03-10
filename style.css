@@ -419,6 +419,9 @@ footer {
   h1{
     font-size: 90px;
   }
+  .top-right{
+    font-size: 50px;
+  }
   .content1{
     font-size: 60px;
   }
@@ -467,6 +470,9 @@ footer {
   p{
     font-size: 14px;
   }
+  .top-right{
+    font-size: 40px;
+  }
   .content1{
     font-size: 50px;
   }
@@ -487,6 +493,9 @@ footer {
   }
   .flip-container{
     width: 90%;
+  }
+  .top-right{
+    font-size: 30px;
   }
   .content1{
     font-size: 40px;
