@@ -1,51 +1,94 @@
-body {
-margin: 0;
-padding: 0;
-font-family: Arial, Helvetica, sans-serif;
-}
-
-ul {
-  list-style-type: none;
-  top:0px;
-  overflow: hidden;
-  background-color: whitesmoke;
-  box-shadow: 0 1px 3px 0 #000;
-  position: sticky;
-  width: 100%;
+*{
+  padding: 0;
   margin: 0;
-  padding: 0px 0px 0px 20px;
-}
-
-#navigationsleiste{
-  position: fixed;
-  width: 100%;
-  margin: 0px;
-  z-index: 100;
-}
-
-li {
-  margin:  12px 40px 12px 20px;
-  float: right;
-  top: 0px;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
-  li a:hover {
-    background-color: #e5e5e5;
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+  background-color:whitesmoke;
+  box-shadow: 0 1px 3px 0 #000;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+img.logo{
+  padding: 0px;
+  margin-top: 8px;
+  margin-left: 40px;
+}
+nav ul{
+  float: right;
+  margin-right: 40px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: black;
+  font-size: 20px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: capitalize;
+}
+a.active,a:hover{
+  background: #e5e5e5;
+  transition: .5s;
+}
+.checkbtn{
+  font-size: 30px;
+  color: black;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
+@media (max-width: 1200px){
+  .checkbtn{
+    display: block;
   }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #e5e5e5;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover,a.active{
+    background: #a100ff;
+    transition: .5s;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
 
 .progress-container
 {
   width: 100%;
   height: 8px;
-  position: sticky;
-  top: 0;
+  padding-top: 12px;
   z-index: 1;
 }
 
@@ -55,12 +98,6 @@ li a {
   background: linear-gradient(90deg, rgba(70,0,115,1) 0%, rgba(117,0,192,1) 50%, rgba(161,0,255,1) 100%);
   width: 0%;
 
-}
-
-*
-{
-  margin:0;
-  padding-top: 0;
 }
 
 .btn{
@@ -94,9 +131,9 @@ h1 {
   background-repeat: repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
-  margin-top: 50px; 
-  margin-bottom: -50px;
-  font-size: 120px; 
+  padding-top: 70px; 
+  margin-bottom: -70px;
+  font-size: 100px; 
   text-align: center; 
   font-weight: bold; 
   text-transform: uppercase; 
@@ -337,6 +374,7 @@ footer {
   width: 100%;
   height: 40px;
   position: fixed;
+  z-index: 1;
   bottom: 0;
   background-color: #f2f2f2;
   border: 1px solid black;
