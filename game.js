@@ -1,8 +1,10 @@
 let img1 = document.getElementById("accman");
+let img2 = document.getElementById("accman_right");
+let id = "";
 var myGamePiece;
 
 function startGame() {
-    myGamePiece = new component(270, 200, img1);
+    myGamePiece = new component(275, 200, img1, img2);
     unitTest = new obstacle (135, 5, "Unit Test");
     componentTest = new obstacle(365, 5, "Component Test");
     assemblyTest = new obstacle(445, 340, "Assembly Test");
@@ -47,15 +49,18 @@ function obstacle (x, y, name){
     }
 }
 
-function component (x, y, img) {
+function component (x, y, img_links, img_rechts) {
     this.speedX = 0;
     this.speedY = 0;
     this.x = x;
     this.y = y;   
-    this.img = img; 
+    this.img_links = img_links;
+    this.img_rechts = img_rechts; 
     this.update = function() {
         ctx = myGameArea.context;
-        ctx.drawImage(this.img, this.x, this.y);
+        if (this.speedX<=0){
+        ctx.drawImage(this.img_links, this.x, this.y);}
+        else{ctx.drawImage(this.img_rechts, this.x, this.y);}
     }
     this.newPos = function() {
         this.x += this.speedX;
@@ -84,31 +89,38 @@ function component (x, y, img) {
 function updateGameArea() {
     if (myGamePiece.crashWith(unitTest)) {
         myGameArea.stop();
-        textFeld("Text zu Test1");
+        id = "t1";
+        textFeld(id);
     }
     else if(myGamePiece.crashWith(componentTest)) {
         myGameArea.stop();
-        textFeld("Text zu Test2");
+        id = "t2";
+        textFeld(id);
     }
     else if(myGamePiece.crashWith(assemblyTest)) {
         myGameArea.stop();
-        textFeld("Text zu Test3");
+        id = "t3";
+        textFeld(id);
     }
     else if(myGamePiece.crashWith(productTest)) {
         myGameArea.stop();
-        textFeld("Text zu Test4");
+        id = "t4";
+        textFeld(id);
     }
     else if(myGamePiece.crashWith(userAcceptanceTest)) {
         myGameArea.stop();
-        textFeld("Text zu Test5");
+        id = "t5";
+        textFeld(id);
     }
     else if(myGamePiece.crashWith(operationalReadinessTest)) {
         myGameArea.stop();
-        textFeld("Text zu Test6");
+        id = "t6";
+        textFeld(id);
     }
     else if(myGamePiece.crashWith(performanceTest)) {
         myGameArea.stop();
-        textFeld("Text zu Test7");
+        id = "t7";
+        textFeld(id);
     }
     else{
         myGameArea.clear();
@@ -145,20 +157,18 @@ function clearmove() {
     myGamePiece.speedY = 0; 
 }
 
-function textFeld(inhalt){
-    let p = document.createTextNode(inhalt);
-    document.getElementById("info").appendChild(p);
-
+function textFeld(id){
     document.getElementById("info").classList.remove("hidden");
-    document.getElementById("restart").classList.remove("hidden");
+    document.getElementById(id).classList.remove("hidden");
+    window.scrollTo(0, 550);
 }
 
 function restartGame(){
 
     myGameArea.clear();
     document.getElementById("info").classList.add("hidden");
-    document.getElementById("info").innerHTML="";
-    document.getElementById("restart").classList.add("hidden");
+    document.getElementById(id).classList.add("hidden");
+    id="";
     startGame();
 
 }
