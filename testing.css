@@ -101,14 +101,31 @@ h1 {
 .card {
     perspective: 600px;
     position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
 }
-.active {
+.card.flip {
     transform: rotateY(180deg);
 }
 .quiz {
     width: 100%;
+    position: absolute;
+}
+#startMathquiz {
+
+}
+#quizeingabe {
+
+}
+#submit {
+    border: solid black 2px;
+    border-radius: 2px;
 }
 .content-back {
+    position: absolute;
     transform: rotateY(180deg);
 }
     

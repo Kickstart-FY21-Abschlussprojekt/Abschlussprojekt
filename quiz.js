@@ -1,5 +1,6 @@
 const gameTypes = ["+", "-", "*", "/"];
 const cards = document.querySelectorAll('.card');
+const btn = document.querySelectorAll('.btn');
 
 document.addEventListener("DOMContentLoaded", function() {
     newTry();
@@ -73,9 +74,18 @@ function calculateAnswer() {
 }
 
 function showContent() {
-    this.classList.add('active');
-    cards.forEach(card => card.addEventListener('click', showContent));
-}
+    
+    if (this.classList.contains('flip')) {
+        this.classList.remove('flip')
+    } else {
+        this.classList.add('flip');
+    }
+   
+} 
+
+btn.forEach(card => card.addEventListener('click', validateAnswer));
+
+
 function showAddQuestion(operand1, operand2) {
     document.getElementById("operand1").textContent = operand1;
     document.getElementById("operand2").textContent = operand2;
