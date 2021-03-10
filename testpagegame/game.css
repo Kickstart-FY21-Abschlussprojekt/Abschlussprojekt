@@ -1,0 +1,118 @@
+body{
+
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.hidden{
+
+display:none;
+
+}
+
+#buttons-container{
+
+float: right;
+margin: 20px 50px 150px 50px;
+width: 400px;
+
+}
+
+.button{
+
+    width: 80px;
+    height: 50px;
+    margin:10px;
+    text-align: center;
+    background-color: blueviolet;
+    color: white;
+    border: 1px solid white;
+}
+
+.button:active{
+
+    background-color: white;
+    color: blueviolet;
+    border-color:blueviolet;
+    outline: none;
+}
+.button:focus{
+
+    outline: none;
+}
+
+#up{
+
+margin-left: 100px;
+
+}
+
+#down{
+
+    margin-left: 100px;
+}
+
+#right{
+
+    margin-left: 87.5px;
+}
+
+#restart{
+
+    width: 200px;
+    height: 50px;
+    margin: 10px 10px 10px 0px;
+    text-align: center;
+    background-color: blueviolet;
+    color: white;
+    border: 1px solid white;
+    display: block;
+}
+
+#restart:active{
+
+    background-color: white;
+    color: blueviolet;
+    border-color:blueviolet;
+    outline: none;
+}
+#restart:focus{
+
+    outline: none;
+}
+
+.formatierung{
+
+    float:left;
+    border: 1px solid black;
+    margin:auto;
+    margin-bottom: 0;
+    
+}
+
+#testinfo{
+    padding-top: 100px;
+    font-size: 16px;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+
+}
+
+#info{
+    margin: 10px 10px 0px 0px;
+    width: 100%;
+    height: auto;
+    clear:both;
+}
+
+.infotext{
+
+    width: 578px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 18px;
+    text-align: justify;
+    border: 2px solid blueviolet;
+
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="game.css" type="text/css">
+    <script src="game.js" async></script>
+    <title>Game</title>
+</head>
+<body onload="startGame()">
+    <img img id="accman" src="acc_man.PNG" style="display: none;">
+    <img img id="accman_right" src="acc_man_right.PNG" style="display: none;">
+    <p id="testinfo">Navigiere mit den Buttons zu den Boxen um mehr über diese zu erfahren.</p>
+    <div id="buttons-container">
+    <button class="button" id="up" onmousedown="moveup()" onmouseup="clearmove()">UP</button> <br></br>
+    <button class="button" id="left" onmousedown="moveleft()" onmouseup="clearmove()">LEFT</button>
+    <button class="button" id="right" onmousedown="moveright()" onmouseup="clearmove()">RIGHT</button><br></br>
+    <button class="button" id="down" onmousedown="movedown()" onmouseup="clearmove()">DOWN</button>
+    </div>
+
+    <div class="hidden"id="info">
+        <p class="hidden infotext" id="t1">Unit-Testing ist ein Softwareentwicklungsprozess, bei dem die kleinsten prüfbaren Teile oder Einheiten  einer Anwendung, die so genannten Units, einzeln und unabhängig voneinander auf ihren ordnungsgemäßen Betrieb hin untersucht werden.</p>
+        <p class="hidden infotext" id="t2">Component Testing ähnelt sehr dem Unit-Test, allerdings beschäftigt sich Component Testing hauptsächlich mit den einzelnen Objekten bzw. Teilen der gesamten Software und weniger mit den einzelnen Units.</p>
+        <p class="hidden infotext" id="t3">Assembly Tests überprüfen den Einsatz und den kombinierten Betrieb von Komponenten (z.B. Einzelmodule, Schnittstellenmodule, usw.), um die Funktionsfähigkeit der Zusammenarbeit zwischen diesen festzustellen.</p>
+        <p class="hidden infotext" id="t4">Product Testing ist ein Prozess, um die Funktionalität einer Softwareanwendung zu bewerten. Es dient dazu festzustellen, ob die entwickelte Software die spezifizierten Anforderungen erfüllt oder nicht.</p>
+        <p class="hidden infotext" id="t5">User Acceptance Testing (UAT) ist die letzte Phase des reinen Software-Testprozesses, in der überprüft wird, ob ein Produkt oder eine Software für den Zweck geeignet ist, für den es ursprünglich entwickelt wurde. Dabei wird festgestellt, ob die Geschäftsanforderungen erfüllt werden.</p>
+        <p class="hidden infotext" id="t6">Operational Readiness Test (ORT) ist meist der letzte Test und betrachtet das entwickelte Produkt als Ganzes. Ziel dabei ist es festzustellen, ob das fertige Produkt sowie alle anderen Bestandteile der Nutzungsumgebung richtig integriert wurden und den Ansprüchen entsprechend funktionieren.</p>
+        <p class="hidden infotext" id="t7">Performance Testing umfasst jede Art von Softwaretest, bei denen die Faktoren wie Leistung, Responsiveness, Skalierbarkeit, Stabilität, Zuverlässigkeit, Geschwindigkeit oder Ressourcenausnutzung auf die Probe gestellt werden.</p>
+    </div>
+
+    <button id="restart" onclick="restartGame()">Starte das Spiel erneut!</button>
+
+</body>
+</html>
