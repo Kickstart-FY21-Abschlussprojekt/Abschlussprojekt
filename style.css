@@ -103,8 +103,8 @@ h1 {
   background-repeat: repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
-  padding-top: 70px; 
   margin-bottom: -70px;
+  margin-top: -20px;
   font-size: 100px; 
   text-align: center; 
   font-weight: bold; 
@@ -338,7 +338,7 @@ h1 {
   height: 35px;
   width: 100px;
   color: white;
-  background-color: rgb(109, 109, 255);
+  background-color: #7500c0;
   border: none;
 
 }
@@ -502,4 +502,20 @@ footer {
 .WatsonAssistantChatHost{
   position: fixed;
   z-index: 0;
+}
+
+.container-image{
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size:60px;
+  padding-top:80px;
+  font-family: Arial, Helvetica, sans-serif; 
+  font-weight: 900;
+}
+
+.top-right {
+  position: absolute;
+  top: 96px;
+  right: 16px;
 }
