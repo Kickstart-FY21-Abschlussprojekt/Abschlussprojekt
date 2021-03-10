@@ -59,7 +59,7 @@ let Quiz ={
     globalScore: function(correctAnswer){    
         const questionsPerQuiz = 1;
          //Abrufen, addieren und hinzufügen der Statistiken
-        firebase.database().ref("question").get().then( function(snapshot) {
+        firebase.database().ref("0/").get().then( function(snapshot) {
             if (snapshot.exists()) {
               console.log(snapshot.val());
               var data = snapshot.val();
@@ -74,7 +74,7 @@ let Quiz ={
               var globalCountQuestion = data.questionsAll + 1;
               var globalPeopleCount = globalQuestionCount/questionsPerQuiz;
             
-              firebase.database().ref('question').set(
+              firebase.database().ref('0/').set(
                 {
                 questionsCorrect: globalCountCorrect,
                 questionsAll: globalCountQuestion,
