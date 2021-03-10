@@ -237,18 +237,18 @@ h1 {
     background-size: cover ;
   }
   #projektmanagement-back {
-    background-image: url(pexels-lukas-669615\ \(1\).jpg);
+    background-image: url(/res/pexels-lukas-6696151.jpg);
     background-repeat: no-repeat;
     background-size: cover ;
     
   }
   #testing {
-    background-image: url(/res/Front6.png);
+    background-image: url(/res/Front6.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
   #testing-back {
-    background-image: url(/res/pexels-thisisengineering-3862632\ \(1\).jpg);
+    background-image: url(/res/pexels-thisisengineering-38626321.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
