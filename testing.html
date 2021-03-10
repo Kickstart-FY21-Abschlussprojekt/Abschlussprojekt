@@ -15,17 +15,17 @@
         <div class="container">
             <div id="content" class="card">
                 <div class="quiz">
-                        <h1 id="startMathquiz">Hier kommst du zum Inhalt</h1>
+                        <h1 class="startMathquiz">Hier kommst du zum Inhalt</h1>
                         <h2>Was ist:
                             <span id="operand1"></span>
                             <span id="operator"></span>
                             <span id="operand2"></span>
                         </h2>
-                        <form id="quizeingabe" onsubmit="validateAnswer(event)">
+                        <form class="quizeingabe" onsubmit="validateAnswer(event)">
                             <label>Antwort hier eingeben:
                                 <input id="antwortBox" name="Antwort" type="number">
                             </label>
-                            <button id="submit" type="submit" class="btn">Antwort absenden</button>
+                            <button type="submit" id="submit">Antwort absenden</button>
                         </form>
                 </div>
                 <div class="content-back">
@@ -38,7 +38,23 @@
             </div>
             
             <div id="content2" class="card">
-                <p>dbfnfnd</p>
+                <div class="quiz">
+                        <h1 class="startMathquiz">Hier kommst du zum Inhalt</h1>
+                        <h2>Was ist:
+                            <span id="operand3"></span>
+                            <span id="operator2"></span>
+                            <span id="operand4"></span>
+                        </h2>
+                        <form class="quizeingabe" onsubmit="validateAnswer1(event)">
+                            <label>Antwort hier eingeben:
+                                <input id="antwortBox2" name="Antwort" type="number">
+                            </label>
+                            <button type="submit" id="submit1">Antwort absenden</button>
+                        </form>
+                </div>
+                <div class="content-back">
+                    <p>dsrth</p>
+                </div>
             </div>
             
             <div id="picture2" class="card">
@@ -46,7 +62,6 @@
             </div>
         </div>
         
-        <button>klick mivh</button>
         
         <script src="quiz.js"></script>
    
