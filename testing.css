@@ -1,64 +1,3 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    }
-    
-    ul {
-      list-style-type: none;
-      top:0px;
-      overflow: hidden;
-      background-color: whitesmoke;
-      box-shadow: 0 1px 3px 0 #000;
-      position: sticky;
-      width: 100%;
-      margin: 0;
-      padding: 0px 0px 0px 20px;
-    }
-    
-    #navigationsleiste{
-      position: fixed;
-      width: 100%;
-      margin: 0px;
-      z-index: 100;
-    }
-    
-    li {
-      margin:  12px 40px 12px 20px;
-      float: right;
-      top: 0px;
-    }
-    
-    li a {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-      li a:hover {
-        background-color: #e5e5e5;
-      }
-    
-    .progress-container
-    {
-      width: 100%;
-      height: 8px;
-      position: sticky;
-      top: 0;
-      z-index: 1;
-    }
-    
-    .progress-bar{
-      height: 8px;
-      background: rgb(70,0,115);
-      background: linear-gradient(90deg, rgba(70,0,115,1) 0%, rgba(117,0,192,1) 50%, rgba(161,0,255,1) 100%);
-      width: 0%;
-    
-    }
-h1 {
-    text-align: center;
-}
 #content {
     grid-area: text1;
     border: Solid black;
@@ -85,7 +24,7 @@ h1 {
     border: Solid black;
     border-radius: 13px;
 }
-.container {
+.grid-container {
     display: grid;
     grid-template-columns: 360px 360px;
     grid-template-rows: 220px 220px;
@@ -93,10 +32,13 @@ h1 {
     grid-template-areas: 
         "picture1 text1"
         "text2 picture2";
-    width: 1000px;
+    width: 740px;
     justify-content: center;
     justify-items: stretch;
     margin: auto;
+}
+.container {
+    width: 100%;
 }
 .card {
     perspective: 600px;
@@ -144,4 +86,6 @@ h1 {
     border: solid black 2px;
     border-radius: 2px;    
 }
- 
+h1 {
+    text-align: center;
+}
