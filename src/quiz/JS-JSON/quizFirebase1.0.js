@@ -1,16 +1,11 @@
-let test ;
+let sID = 1;
 let Quiz ={
-    build(QID){
-        if(test != null){
-            this.qid = test;
-            QID = test;
-        }else{
+    build(QID = 1){
         this.qid = QID;
-        };
         firebase.database().ref(`${this.qid}/`).once("value").then(function(sn) {
             var question=sn.val().question;
             var id = sn.val().id;
-            document.getElementById(`questions`).innerHTML=question;
+            document.getElementById(`questions:${QID}`).innerHTML=question;
             let ans = [];
             firebase.database().ref(`${QID}/answers`).once("value").then(function(snapshort) {
                 snapshort.forEach(snap => {
@@ -24,22 +19,10 @@ let Quiz ={
                         </div>`
                     );
                 });
-                document.getElementById(`quiz-option`).innerHTML = ans.join('');
-                document.getElementById(`submit-btn`).addEventListener('click', Quiz.showResult(QID));
+                document.getElementById(`quiz-option:${QID}`).innerHTML = ans.join('');
+                document.getElementById(`submit-btn:${QID}`).addEventListener('click', Quiz.showResult(QID));
             });
         });
-        function getUserAnswer(){
-            //Getting the Value of the User Choosen Answer 
-            var asnwer = document.getElementById(`quiz`).elements[`question`];
-            for (var i = 0; i < asnwer; i++) {
-               asnwer[i].onclick = function() {
-               return asnwer.value;
-                };
-            };  
-        };
-        getUserAnswer();
-        
-        
     },
     
     showResult(qid){
@@ -68,9 +51,10 @@ let Quiz ={
                             <button class="button" id="next">Next Question</button>
                         </div>`
                     );
-                    console.log(output);
-                    document.getElementById(`quiz-option`).innerHTML=  output.join('');
-                    document.getElementById(`next`).addEventListener('click', Quiz.nextQuestion(qid));
+                    console.log(`qid: ${qid}`)
+                    document.getElementById('next').addEventListener('click', nextQuestion(qid));
+                    test = test +1;
+                    console.log(`test: ${test}`)
                     
                     //Update Global Scoreboard  
                     Quiz.globalScore((UserAnswer == rA));                             
@@ -85,7 +69,6 @@ let Quiz ={
          //Abrufen, addieren und hinzufügen der Statistiken
         firebase.database().ref("0/").get().then( function(snapshot) {
             if (snapshot.exists()) {
-              console.log(snapshot.val());
               var data = snapshot.val();
               var globalCountCorrect;
 
@@ -110,10 +93,4 @@ let Quiz ={
                   console.log("No data available");
                 }});
     },
-    nextQuestion(QID){
-        test = QID + 1;
-        Quiz.build(test);
-
-    }
-};
-Quiz.build(1);
+}
