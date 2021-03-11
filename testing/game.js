@@ -9,7 +9,7 @@ function startGame() {
     componentTest = new obstacle(365, 5, "Component Test");
     assemblyTest = new obstacle(445, 340, "Assembly Test");
     productTest = new obstacle(55, 340, "Product Test");
-    userAcceptanceTest = new obstacle(250, 445, "UAT");
+    userAcceptanceTest = new obstacle(250, 395, "UAT");
     performanceTest= new obstacle(5, 150, "Performance Test");
     operationalReadinessTest = new obstacle(495, 150, "ORT");
     myGameArea.start();
@@ -20,9 +20,9 @@ var myGameArea = {
     start : function() {
         this.canvas.classList.add("formatierung");
         this.canvas.width = 600;
-        this.canvas.height = 550;
+        this.canvas.height = 500;
         this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+        document.body.insertBefore(this.canvas, document.getElementById("accman"));
         this.interval = setInterval(updateGameArea, 20);
     },
     clear : function() {
@@ -160,7 +160,7 @@ function clearmove() {
 function textFeld(id){
     document.getElementById("info").classList.remove("hidden");
     document.getElementById(id).classList.remove("hidden");
-    window.scrollTo(0, 550);
+    window.scrollBy(0, 250);
 }
 
 function restartGame(){

@@ -46,6 +46,7 @@ h1 {
 
 body {
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 footer {
@@ -140,7 +141,7 @@ li a:hover {
   
 }
 
-p{
+.para{
   text-align:center;
   text-align: justify;
   text-justify:auto;
@@ -177,5 +178,3 @@ h2{
 
 
 }
-
-0
