@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <link rel="Stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Homepage</title>
+</head>
+
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <a href="/index.html"><img class="logo" src="/res/Accenture-Logo.png" width="140" height="90"></a>
+        <ul>
+          <li><a href="/softskills/softskill.html" class="listItem">Softskill-Training</a></li>
+          <li><a href="#" class="listItem">Projektmanagement-Skills</a></li>
+          <li><a href="#" class="listItem">Testing</a></li>
+          <li><a href="#" class="listItem">Software Engineering</a></li>
+          <li><a href="#" class="listItem">Business-Analyse</a></li>
+        </ul>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+            <script src="script.js"></script>
+        </div>
+    </nav>
+
+    <div>
+        <script>
+            window.watsonAssistantChatOptions = {
+            integrationID: "f05a08ea-c453-489e-a820-0e23c03a45bb", // The ID of this integration.
+            region: "eu-de", // The region your integration is hosted in.
+            serviceInstanceID: "0c5b70fc-6648-48ff-9d11-d74e00eb5306", // The ID of your service instance.
+            onLoad: function(instance) { instance.render(); }
+            };
+            setTimeout(function(){
+            const t=document.createElement('script');
+            t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+            document.head.appendChild(t);
+            });
+        </script>
+    </div>
+
+    <div class="container">
+        <div class="container-image">
+            <img src="/res/sky.jpg" alt="Skyscraper" style="width:100%;">
+            <div class="top-right">Let there be change ></div>
+        </div>
+        <h1>Kickstart</h1>
+        <p>        
+            <b><big>Hallo Du!</big></b> Es freut uns, dass es Dich hierhergeführt hat. Du interessierst dich für ein duales Studium bei Accenture und möchtest wissen, was dich die ersten Wochen in deiner Praxisphase erwartet? Dann bist Du hier genau richtig!</br></br>
+
+            Auf dieser Seite erhältst Du einen Gesamtüberblick über den Accenture Kickstart! 
+            Der Kickstart ist ein Programm von Accenture, das den dualen Studenten ermöglicht, grundlegende Kenntnisse und Fähigkeiten zu erwerben, bevor es für Dich auf dein erstes Projekt bei einem unserer Kunden geht!</br></br>
+            
+            In einem Zeitraum von 7 Wochen lernst Du Accenture als Arbeitgeber besser kennen und setzt dich anschließend mit spannenden Themen auseinander, die Dir auf deinem Projekt begegnen können oder Dich generell auf das Projekt und deine Arbeit bei Accenture vorbereiten.</br></br> 
+            
+            
+           <u> Zu den folgenden Themen:</u></br> </br></br>
+            
+            <a style="color:black; font-size: 15px;font-weight: bold; "href="#softskill">-	Softskills </a></br>
+            <a style="color:black; font-size: 15px;font-weight: bold; "href="#projektmanagement" > - Projektmanagement</a></br>
+            <a  style="color:black; font-size: 15px;font-weight: bold; "href="#testing" >- Testing </a></br>
+            <a style="color:black; font-size: 15px;font-weight: bold; "href="#bA">-	Business Analyse</a> </br>
+            <a style="color:black; font-size: 15px;font-weight: bold; "href="#sE"> -	Software Engineering</a></br><br>
+            
+            
+            durchläufst Du abwechslungsreiche Trainings mit ausgebildeten Trainern von Accenture und lernst dabei neue Mitarbeiter kennen!</br>
+            Außerdem hast Du die Möglichkeit, dir auch selbstständig und in Gruppen Themen zu erarbeiten und Experte darin zu werden. Spannende und herausfordernde Aufgaben warten auf Dich!</br></br>
+            
+            Damit Du vorab weißt, was auf dich zukommt und was sich hinter diesen Themen verbirgt, kannst du hier schon einiges über die Kickstart Themen erfahren und lernen. Und zu jedem Thema, jeweils dein Wissen testen, das Du bereits erlangt hast. Wir wünschen Dir viel Spaß!
+            
+        </p>            
+    </div>
+
+    <div class="flip-container" onclick="this.classList.toggle('onclick');">
+        <div class="flipper">
+            <div id="softskill" class="front">
+                <div  class="content1">Softskills</div>
+            </div>
+            <div id="softskill-back" class="back">
+                <div class="content2">Du möchtest erfolgreich in einem Unternehmen arbeiten? Hierzu sind einige Kompetenzen erforderlich, die Du im Kickstart erlernen wirst. 
+                    Neben Methodischen Kompetenzen im Bereich Planung und Präsentation, wird vor allem Wert auf ausgeprägte persönliche und soziale Kompetenzen gelegt. Du setzt dich mit Themen wie <b>Konfliktmanagement, Kommunikationsfähigkeit,</br> Stressresistenz</b> und Vielem mehr auseinander
+                    und lernst dich dabei selbst besser kennen. <b>Schau doch mal hier vorbei!</b>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flip-container" onclick="this.classList.toggle('onclick');">
+        <div class="flipper">
+            <div id="projektmanagement" class="front">
+                <div  class="content1">Projektmanagement</div>
+            </div>
+            <div id="projektmanagement-back" class="back">
+                <div class="content2">Du willst wissen, wie wir auf unseren Projekten arbeiten?</br>
+                    Und was man genau unter dem <b>Wasserfall Modell</b> oder einem Framework wie <b>„SCRUM“</b> versteht 
+                    und welche Rollen sie dabei spielen? <b>Dann informiere Dich hier</b> und erfahre zudem,</br> welche Tools wir dabei verwenden!
+                    </div>
+            </div>
+        </div>
+    </div>
+            
+    <div class="flip-container" onclick="this.classList.toggle('onclick');">
+        <div class="flipper">
+            <div id="testing" class="front">
+                <div class="content1">Testing</div>
+            </div>
+            <div id="testing-back" class="back">
+                <div class="content2">Du wolltest schon immer erfahren, wie wir die Qualität für unsere Kunden gewährleisten können?</br>
+                    Das <b>Testing</b> spielt dabei eine ganz wichtige Rolle, indem es z.B. Fehler im Code aufdeckt und behebt.</br>
+                    <b>Erfahre hier mehr über den ganzen Testing-Prozess!</b>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="flip-container" onclick="this.classList.toggle('onclick');">
+        <div class="flipper">
+            <div id="bA" class="front">
+                <div class="content1">Business Analyse</div>
+            </div>
+            <div id="bA-back" class="back">
+                <div class="content2">Accenture ist es sehr wichtig, so eng wie möglich mit den Kunden zusammenzuarbeiten und gemeinsam Ideen zu realisieren.</br> 
+                    Das Ganze funktioniert nicht ohne die <b>Business Analyse</b>, in der zunächst der Bedarf des Kunden ermittelt wird, Lösungsansätze besprochen werden und letztlich eine Veränderung umgesetzt wird.</br> 
+                    Du möchtest mehr Details zur Business Analyse? <b>Dann informiere Dich jetzt!</b>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="flip-container" onclick="this.classList.toggle('onclick');">
+        <div class="flipper">
+            <div id="sE" class="front">
+                <div class="content1">Software Engineering</div>
+            </div>
+            <div id="sE-back" class="back">
+                <div class="content2">Du hast genug von Theorie und möchtest endlich in die Praxis?</br>
+                     Beim <b>Software Engineering</b> gehts ans Eingemachte! Du lernst verschiedene Programmiersprachen wie <b>"Java"</b> kennen und wendest sie zur Umsetzung interessanter Aufgaben an.</br>
+                      Dabei kannst du beispielsweise in der <b>Web Entwicklung</b>, in der <b>Front- oder der Backend-Entwicklung</b> tätig sein.
+                    <b>Informiere Dich hier</b> über die ersten Grundlagen einer Programmiersprache und wo Du damit arbeiten kannst!
+
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div id="contact" class="kontakt-container">
+        <div class="headline-container">
+            <p id="title">Kontaktiere uns für weitere Infos 😊</p>
+            <p id="subtitle">Pflichtfelder (*) bitte angeben.</p>
+        </div>
+        <form>
+            <div class="kontakt-formular">
+                <div class="grid-beschreibung" id="grid-i1">Vorname</div>    
+                <div class="grid-beschreibung" id="grid-i2">Nachname</div>
+                <div class="grid-input" id="grid-i3"><input class="input" id="vorname" type="text"></div>
+                <div class="grid-input" id="grid-i4"><input class="input" id="nachname" type="text"></div>
+                <div class="grid-beschreibung" id="grid-i5">E-Mail *</div>
+                <div class="grid-beschreibung" id="grid-i6">Telefon</div>
+                <div class="grid-input" id="grid-i7"><input class="input" id="e-mail" type="text"></div>
+                <div class="grid-input" id="grid-i8"><input class="input" id="telefon" type="text"></div>
+                <div class="grid-beschreibung" id="grid-i9">Nachricht *</div>
+                <div class="grid-input" id="grid-i10"><textarea class="input" id="nachricht" type="text"></textarea></div>
+            </div>
+            <button type="button" id="btn">Absenden</button>
+        </form>
+        </div>
+
+    <footer>
+        <div id="copyright">&lt;/&gt; with 💜 by Kickstart FY21</div>
+    </footer>
+</body>
+
+</html>
