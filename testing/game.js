@@ -4,7 +4,7 @@ let id = "";
 var myGamePiece;
 
 function startGame() {
-    myGamePiece = new component(275, 200, img1, img2);
+    myGamePiece = new component(275, 180, img1, img2);
     unitTest = new obstacle (160, 5, "Unit Test");
     componentTest = new obstacle(340, 5, "Component Test");
     assemblyTest = new obstacle(445, 315, "Assembly Test");
@@ -22,7 +22,7 @@ var myGameArea = {
         this.canvas.width = 600;
         this.canvas.height = 450;
         this.context = this.canvas.getContext("2d");
-        document.body.insertBefore(this.canvas, document.getElementById("accman"));
+        document.body.insertBefore(this.canvas, document.getElementById("testinfo"));
         this.interval = setInterval(updateGameArea, 20);
     },
     clear : function() {
@@ -166,8 +166,11 @@ function textFeld(id){
 function restartGame(){
     
     myGameArea.clear();
+    
+    if (!document.getElementById("info").classList.contains("hidden")){
     document.getElementById("info").classList.add("hidden");
     document.getElementById(id).classList.add("hidden");
+    }
     id="";
     window.scrollTo(0, 1380);
     startGame();
