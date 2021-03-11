@@ -48,9 +48,11 @@ function runGame2(question2) {
 
 function validateAnswer(event) {
     event.preventDefault();
-    let userAnswer = document.getElementById("antwortBox").innerHTML.toLowerCase;
-    let rightAnswer = calculateAnswer().toLowerCase;
-    let isCorrect = userAnswer === rightAnswer;
+    let userAnswer = document.getElementById("antwortBox").value;
+    let rightAnswer = calculateAnswer();
+    let isCorrect = userAnswer.toString().toLowerCase() === rightAnswer.toLowerCase();
+    console.log(rightAnswer.toLowerCase());
+    console.log(userAnswer.toString().toLowerCase());
 
     if (isCorrect) {
         this.addEventListener('submit', showContent);
@@ -61,11 +63,12 @@ function validateAnswer(event) {
 }
 function validateAnswer1(event) {
     event.preventDefault();
-    let userAnswer1 = document.getElementById("antwortBox2").innerHTML.toLowerCase;
-    let rightAnswer1 = calculateAnswer1().toLowerCase;
-    let isCorrect1 = userAnswer1 === rightAnswer1;
-
-    if (isCorrect1) {
+    let userAnswer = document.getElementById("antwortBox2").value;
+    let rightAnswer = calculateAnswer1();
+    let isCorrect = userAnswer.toString().toLowerCase() === rightAnswer.toLowerCase();
+    console.log(rightAnswer.toLowerCase());
+    console.log(userAnswer.toString().toLowerCase());
+    if (isCorrect) {
         this.addEventListener('submit', showContent1);
     } else {
         newTry1();
@@ -73,11 +76,13 @@ function validateAnswer1(event) {
 }
 function validateAnswer0(event) {
     event.preventDefault();
-    let userAnswer2 = document.getElementById("antwortBox1").innerHTML.toLowerCase;
-    let rightAnswer2 = calculateAnswer2().toLowerCase;
-    let isCorrect2 = userAnswer2 === rightAnswer2;
+    let userAnswer = document.getElementById("antwortBox1").value;
+    let rightAnswer = calculateAnswer2();
+    let isCorrect = userAnswer.toString().toLowerCase() === rightAnswer.toLowerCase();;
+    console.log(rightAnswer.toLowerCase());
+    console.log(userAnswer.toString().toLowerCase());
 
-    if (isCorrect2) {
+    if (isCorrect) {
         this.addEventListener('submit', showContent2);
     } else {
         newTry2();
@@ -86,11 +91,13 @@ function validateAnswer0(event) {
 }
 function validateAnswer2(event) {
     event.preventDefault();
-    let userAnswer3 = document.getElementById("antwortBox3").innerHTML.toLowerCase;
-    let rightAnswer3 = calculateAnswer3().toLowerCase;
-    let isCorrect3 = userAnswer3 === rightAnswer3;
+    let userAnswer = document.getElementById("antwortBox3").value;
+    let rightAnswer = calculateAnswer3();
+    let isCorrect = userAnswer.toString().toLowerCase() === rightAnswer.toLowerCase();
+    console.log(rightAnswer.toLowerCase());
+    console.log(userAnswer.toString().toLowerCase());
 
-    if (isCorrect3) {
+    if (isCorrect) {
         this.addEventListener('submit', showContent3);
     } else {
         newTry3();

@@ -138,7 +138,7 @@
     transform: scale(1.05);
 }
 .flip {
-    transform: rotateX(180deg);
+    transform: rotateX(180deg);   
 }
 .quiz {
     width: 100%;
