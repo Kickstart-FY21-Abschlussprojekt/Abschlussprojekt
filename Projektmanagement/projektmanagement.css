@@ -81,14 +81,6 @@
     font-size: small;
 }
 #content1 {
-    grid-area: picture1;
-    border: Solid black;
-    border-radius: 10px;
-    background: linear-gradient(90deg, rgba(70,0,115,1) 0%, rgba(117,0,192,1) 100%);
-    padding: 5px;
-    font-size: small;
-}
-#content2 {
     grid-area: text2;
     border: Solid black;
     border-radius: 10px;
@@ -96,8 +88,16 @@
     padding: 5px;
     font-size: small;
 }
+#content2 {
+    grid-area: text3;
+    border: Solid black;
+    border-radius: 10px;
+    background: linear-gradient(90deg, rgba(70,0,115,1) 0%, rgba(117,0,192,1) 100%);
+    padding: 5px;
+    font-size: small;
+}
 #content3 {
-    grid-area: picture2;
+    grid-area: text4;
     border: Solid black;
     border-radius: 10px;
     background: linear-gradient(90deg, rgba(70,0,115,1) 0%, rgba(117,0,192,1) 100%);
@@ -110,8 +110,8 @@
     grid-template-rows: 220px 220px;
     grid-gap: 20px 20px;
     grid-template-areas: 
-        "picture1 text1"
-        "text2 picture2";
+        "text1 text2"
+        "text3 text4";
     width: 740px;
     justify-content: center;
     justify-items: stretch;
