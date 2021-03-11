@@ -7,7 +7,7 @@ display:none;
 #buttons-container{
 
 float: right;
-margin: 20px 50px 150px 50px;
+margin: 20px 50px 80px 50px;
 width: 400px;
 
 }
@@ -94,7 +94,6 @@ margin-left: 100px;
 }
 
 #info{
-    margin: 10px 10px 0px 0px;
     width: 100%;
     height: auto;
     clear:both;

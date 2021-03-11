@@ -5,13 +5,13 @@ var myGamePiece;
 
 function startGame() {
     myGamePiece = new component(275, 200, img1, img2);
-    unitTest = new obstacle (135, 5, "Unit Test");
-    componentTest = new obstacle(365, 5, "Component Test");
-    assemblyTest = new obstacle(445, 340, "Assembly Test");
-    productTest = new obstacle(55, 340, "Product Test");
-    userAcceptanceTest = new obstacle(250, 395, "UAT");
-    performanceTest= new obstacle(5, 150, "Performance Test");
-    operationalReadinessTest = new obstacle(495, 150, "ORT");
+    unitTest = new obstacle (160, 5, "Unit Test");
+    componentTest = new obstacle(340, 5, "Component Test");
+    assemblyTest = new obstacle(445, 315, "Assembly Test");
+    productTest = new obstacle(55, 315, "Product Test");
+    userAcceptanceTest = new obstacle(250, 345, "UAT");
+    performanceTest= new obstacle(30, 150, "Performance Test");
+    operationalReadinessTest = new obstacle(470, 150, "ORT");
     myGameArea.start();
 }
 
@@ -20,7 +20,7 @@ var myGameArea = {
     start : function() {
         this.canvas.classList.add("formatierung");
         this.canvas.width = 600;
-        this.canvas.height = 500;
+        this.canvas.height = 450;
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.getElementById("accman"));
         this.interval = setInterval(updateGameArea, 20);
@@ -160,15 +160,16 @@ function clearmove() {
 function textFeld(id){
     document.getElementById("info").classList.remove("hidden");
     document.getElementById(id).classList.remove("hidden");
-    window.scrollBy(0, 250);
+    window.scrollTo(0, 1600);
 }
 
 function restartGame(){
-
+    
     myGameArea.clear();
     document.getElementById("info").classList.add("hidden");
     document.getElementById(id).classList.add("hidden");
     id="";
+    window.scrollTo(0, 1380);
     startGame();
 
 }
