@@ -160,7 +160,7 @@ function clearmove() {
 function textFeld(id){
     document.getElementById("info").classList.remove("hidden");
     document.getElementById(id).classList.remove("hidden");
-    window.scrollTo(0, 1600);
+    window.scrollTo(0, 1660);
 }
 
 function restartGame(){
@@ -172,7 +172,7 @@ function restartGame(){
     document.getElementById(id).classList.add("hidden");
     }
     id="";
-    window.scrollTo(0, 1380);
+    window.scrollTo(0, 1440);
     startGame();
 
 }
