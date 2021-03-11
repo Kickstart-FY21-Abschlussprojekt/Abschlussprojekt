@@ -5,25 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./softskill.css" type="text/css">
+    <link rel="Stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <title>Softskill-Training</title>
 </head>
 
-    <body>
-        <div id="navigationsleiste">
-            <ul>
-                <a href="/index.html"><img id="bild" src="Accenture-Logo.png" width="110" height="62" alt="Accenture-Logo"/></a>
-                <li class="listitem1"><a style="color:black; font-size: 15px;font-weight: bold;"href="/softskills/softskill.html">Softskill-Training</a></li>
-                <li class="listitem2"><a style="color:black; font-size: 15px;font-weight: bold;"href="#Projektmanagement Skills">Projektmanagement Skills</a></li>
-                <li class="listitem3"><a style="color:black; font-size: 15px;font-weight: bold;"href="/testing/testingpage.html">Testing</a></li>
-                <li class="listitem4"><a style="color:black; font-size: 15px;font-weight: bold;"href="#Software Engineering">Software Engineering</a></li>
-                <li class="listitem5"><a style="color:black; font-size: 15px;font-weight: bold;"href="#Business-Analyse">Business-Analyse</a></li>
-            </ul>
-        
-                <div class="progress-container">
-                    <div class="progress-bar" id="myBar"></div>
-                    <script src="navigationsleiste.js"></script>
-                </div>
-        </div>
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <a href="/index.html"><img class="logo" src="/res/Accenture-Logo.png" width="140" height="90"></a>
+    <ul>
+      <li><a href="/softskills/softskill.html" class="listItem">Softskill-Training</a></li>
+      <li><a href="#" class="listItem">Projektmanagement-Skills</a></li>
+      <li><a href="/testing/testingpage.html" class="listItem">Testing</a></li>
+      <li><a href="#" class="listItem">Software Engineering</a></li>
+      <li><a href="#" class="listItem">Business-Analyse</a></li>
+    </ul>
+    <div class="progress-container">
+        <div class="progress-bar" id="myBar"></div>
+        <script src="navigationsleiste.js"></script>
+    </div>
+</nav>
+
+<div>
+    <script>
+        window.watsonAssistantChatOptions = {
+        integrationID: "f05a08ea-c453-489e-a820-0e23c03a45bb", // The ID of this integration.
+        region: "eu-de", // The region your integration is hosted in.
+        serviceInstanceID: "0c5b70fc-6648-48ff-9d11-d74e00eb5306", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+        };
+        setTimeout(function(){
+        const t=document.createElement('script');
+        t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+        document.head.appendChild(t);
+        });
+    </script>
+</div>
 
         <div class="container1">
         <h1>Softskill-Training</h1>
