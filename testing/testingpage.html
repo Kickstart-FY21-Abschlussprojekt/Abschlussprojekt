@@ -11,21 +11,24 @@
 </head>
 
     <body onload="startGame()">
-        <div id="navigationsleiste">
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+              <i class="fas fa-bars"></i>
+            </label>
+            <a href="/index.html"><img class="logo" src="/res/Accenture-Logo.png" width="140" height="90"></a>
             <ul>
-                <a href="./index.html"><img id="bild" src="/res/Accenture-Logo.png" width="110" height="62" alt="Accenture-Logo"/></a>
-                <li class="listitem1"><a style="color:black; font-size: 15px;font-weight: bold;"href="/softskills/softskill.html">Softskill-Training</a></li>
-                <li class="listitem2"><a style="color:black; font-size: 15px;font-weight: bold;"href="#Projektmanagement Skills">Projektmanagement Skills</a></li>
-                <li class="listitem3"><a style="color:black; font-size: 15px;font-weight: bold;"href="#Testing">Testing</a></li>
-                <li class="listitem4"><a style="color:black; font-size: 15px;font-weight: bold;"href="#Software Engineering">Software Engineering</a></li>
-                <li class="listitem5"><a style="color:black; font-size: 15px;font-weight: bold;"href="#Business-Analyse">Business-Analyse</a></li>
+              <li><a href="/softskills/softskill.html" class="listItem">Softskill-Training</a></li>
+              <li><a href="#" class="listItem">Projektmanagement-Skills</a></li>
+              <li><a href="/testing/testingpage.html" class="listItem">Testing</a></li>
+              <li><a href="#" class="listItem">Software Engineering</a></li>
+              <li><a href="#" class="listItem">Business-Analyse</a></li>
             </ul>
-        
-                <div class="progress-container">
-                    <div class="progress-bar" id="myBar"></div>
-                    <script src="navigationsleiste.js"></script>
-                </div>
-        </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+                <script src="navigationsleiste.js"></script>
+            </div>
+        </nav>
 
         <div class="container1">
         <h1>Testing</h1>
