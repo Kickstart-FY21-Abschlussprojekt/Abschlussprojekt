@@ -7,8 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="Stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
         <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-        <link href="testing.css" rel="stylesheet">
-        <link href="navigationsleiste.css" rel="stylesheet">
+        <link href="projektmanagement.css" rel="stylesheet">
     </head>
   
     <body>
@@ -17,9 +16,9 @@
             <label for="check" class="checkbtn">
               <i class="fas fa-bars"></i>
             </label>
-            <a href="./index.html"><img class="logo" src="Accenture-Logo.png" width="140" height="90"></a>
+            <a href="/index.html"><img class="logo" src="/res/Accenture-Logo.png" width="140" height="90"></a>
             <ul>
-              <li><a href="#" class="listItem">Softskill-Training</a></li>
+              <li><a href="/softskills/softskill.html" class="listItem">Softskill-Training</a></li>
               <li><a href="#" class="listItem">Projektmanagement-Skills</a></li>
               <li><a href="#" class="listItem">Testing</a></li>
               <li><a href="#" class="listItem">Software Engineering</a></li>
@@ -27,9 +26,10 @@
             </ul>
             <div class="progress-container">
                 <div class="progress-bar" id="myBar"></div>
-                <script src="script.js"></script>
+                <script src="navigationsleiste.js"></script>
             </div>
         </nav>
+
         
         <div>
             <script>
@@ -46,14 +46,40 @@
                 });
             </script>
         </div>
-        
+        <br>
+        <br>
+        <br>
+        <br>
         <br>
         <h1>Projektmanagement</h1>
+        
+        <h2 class="subheading">Definition</h2>
+        <p>
+            Projektmanagement (im Englischen:project management) umfasst alle Aufgaben, die mit der Planung, Steuerung, Organisation und Kontrolle 
+            von Projekten zu tun haben. Dabei werden Faktoren wie Personal, Budget und Zeitraum festgelegt. Eines der älteren Modelle, das unter dem Thema Projektmanagement 
+            zu finden ist, ist die sogennante Wasserfall Methode - im englischen auch als „waterfall model“ bekannt. Darunter versteht man folgendes:
+        </p>
+        
+        <h2 class="subheading">Wasserfall Methode</h2>
+        <p>
+            Das Wasserfallmodell dient innerhalb der Softwareentwicklung als Vorgehensmodell und stellt einen sequentiellen und linearen Vorgang dar. Dabei wird 
+            innerhalb des Modells unter fünf bis sieben Projektphasen unterschieden. Diese Phasen werden linear abgeschlossen und die anschließenden Phasen werden
+            mit den neuen Zielen und Aufgaben angegangen. Dabei umfasst die Wasserfall Methode den gesamten Lebenszyklus der Software bis zur Auslieferung.
+        </p>
+
+        <div class="flex">
+            <img id="pm-pic1" src="https://management.bildungsbibel.de/wp-content/uploads/2020/05/wasserfallmodell-softwareentwicklung.jpg">
+        </div>
+        <h2 class="subheading">Scrum</h2>
+        <p>
+            Scrum dient als Rahmenwerk für die Zusammenarbeit von Teams, basierend auf Rollen ,Werkzeugen und Meetings. Damit wird ein klarer 
+            Arbeitsprozess festgelegt,  der wiederum auf Agile Prinzipien geregelt ist. Zu diesen Prinzipien gehören unter anderem folgende Aussagen: 
+        </p>
+
         <div class="container">
             <div class="grid-container">
                 <div id="content" class="card">
                     <div class="quiz">
-                            <h2 class="startMathquiz">Hier kommst du zum Inhalt</h2>
                             <h2>
                                 <span id="question"></span>                            
                             </h2>
@@ -61,21 +87,33 @@
                                 <label>Antwort hier eingeben:
                                     <input id="antwortBox" name="Antwort" type="text">
                                 </label>
-                                <button type="submit" id="submit">Antwort absenden</button>
+                                <button type="submit" id="submit0" class="submit">Antwort absenden</button>
                             </form>
                     </div>
                     <div class="content-back">
-                        <p>dsrth</p>
+                        <p>Die Entwicklungsprozesse werden von selbstorganisierten Teams durchgeführt</p>
                     </div>
                 </div>
             
-                <div id="picture" class="card">
-                    <img class="backface" src="" style="">
+                <div id="content1" class="card">
+                    <div class="quiz">
+                        <h2>
+                            <span id="question0"></span>                            
+                        </h2>
+                        <form class="quizeingabe" onsubmit="validateAnswer0(event)">
+                            <label>Antwort hier eingeben:
+                                <input id="antwortBox1" name="Antwort" type="text">
+                            </label>
+                            <button type="submit" id="submit1" class="submit">Antwort absenden</button>
+                        </form>
+                    </div>
+                    <div class="content-back">
+                        <p>In regelmäßigen Abständen wird über die Effektivität des Teams reflektiert und somit das Verhalten angepasst</p>
+                    </div>
                 </div>
             
                 <div id="content2" class="card">
                     <div class="quiz">
-                            <h2 class="startMathquiz">Hier kommst du zum Inhalt</h2>
                             <h2>
                                 <span id="question1"></span>
                             </h2>
@@ -83,20 +121,70 @@
                                 <label>Antwort hier eingeben:
                                     <input id="antwortBox2" name="Antwort" type="text">
                                 </label>
-                                <button type="submit" id="submit1">Antwort absenden</button>
+                                <button type="submit" id="submit2" class="submit">Antwort absenden</button>
                             </form>
                     </div>
                     <div class="content-back">
-                        <p>dsrth</p>
+                        <p>Der Fokus liegt in der Lieferung von funktionierender Software in einem regelmäßigen und kurzfristigen Abstand </p>
                     </div>
                 </div>
             
-                <div id="picture2" class="card">
-                    <img src="" style="">
+                <div id="content3" class="card">
+                    <div class="quiz">
+                        <h2>
+                            <span id="question2"></span>                            
+                        </h2>
+                        <form class="quizeingabe" onsubmit="validateAnswer2(event)">
+                            <label>Antwort hier eingeben:
+                                <input id="antwortBox3" name="Antwort" type="text">
+                            </label>
+                            <button type="submit" id="submit3" class="submit">Antwort absenden</button>
+                        </form>
+                    </div>
+                    <div class="content-back">
+                        <p>Anforderungsänderungen sind auch zu einem späteren Zeitpunkt in der Entwicklungsphase willkommen </p>
+                    </div>
                 </div>
+            </div>
         </div>
+        <div class="text">
+            
+                Dabei werden folgende Elemente verwendet: 
+                <div class="notes"><br>• Scrum Rollen, die die verantwortlichkeiten der handelnden Personen definieren</div>
+                <div class="notes"><br>• Scrum Meetings, die wiederkehrende Aktivitäten darstellen</div>
+                <div class="notes"><br>• Scrum Artfekate, welche wichtige Werkzeuge und Begrifflichkeiten umfassen</div>
+                <br>Der wichtigste Eckpunkt hierbei ist jedoch der Scrum Prozess, der eine zirkuläre Abfolge von Sprints, die 
+                weitere Scrum Meetings beinhalten, darstellt. 
+                Die folgende Grafik veranschaulicht den Scrum Prozess, welcher lediglich zur Orientation dient. Im Kickstart wird auf die einzelnen Elemente; 
+                sowie zu den Teilprozessen mittels Präsentationen und interaktiven Übungsphasen weiter eingegangen.
+            
         </div>
-        
+        <div class="flex">
+            <img id="pm-pic2" src="https://erfolgreich-projekte-leiten.de/wp-content/uploads/2017/03/SCRUM-Prozess-Schaubild-neu.jpg">
+        </div>        
+
+        <h2 class="subheading">Agile Tools am Beispiel von Kanban auf GitHub</h2>
+        <div class="text">
+            Trello und Github gehören zu den Tools, die im Rahmen des Kickstarts besonders bei der Planung und Steurung von Projekten 
+            hilfreich sind. Diese unterstüzen dabei Aufgabengebiete klar zu verteilen und somit eine klare Aufgabenstruktur darzulegen, indem: 
+            <div class="notes"><br>• Aufgaben in Form von Karten, in Prozesse wie:„In-progess“ oder „Done“ eingeteilt und diesen verantwortliche Teilnehmer hinzugefügt werden</div>
+            <div class="notes"><br>• Über dem „Product-Backlog“ bestehende Aufgaben gekennzeichnet werden</div>
+            <div class="notes"><br>• Aufgaben, die für den Sprint(dauer 1-4 Wochen) zu erledigen sind, im Fall des Github Kanban Boards mit der Rubrik „Sprint-Backlog“ dargestellt werden und welche Aufgaben für den festgelegten Zeitraum bearbeitet werden</div>
+        </div>
+
+        <div class="flex">
+            <img id="pm-pic3" src="Kanban-board.PNG" alt="Kanban-board in GitHub">
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <footer>
+            <a id="footerhref" href="/index.html#contact">Kontakt</a>
+            <div id="copyright">&lt;/&gt; with 💜 by Kickstart FY21</div>
+        </footer>
+
         <script src="quiz.js"></script>
    
     </body>
