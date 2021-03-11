@@ -319,7 +319,7 @@ h1 {
 }
   .input:focus{
     outline: none !important;
-    border-color: blue;
+    border-color: #7500c0;
   }
 
 #nachricht {
