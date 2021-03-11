@@ -46,6 +46,7 @@ h1 {
 
 body {
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 footer {
@@ -74,59 +75,70 @@ footer {
     padding-top: 10px;
   }
 
-ul {
-  list-style-type: none;
-  top:0px;
-  overflow: hidden;
-  background-color: whitesmoke;
-  box-shadow: 0 1px 3px 0 #000;
-  position: sticky;
-  width: 100%;
-  margin: 0;
-  padding: 0px 0px 0px 20px;
-}
-
-#navigationsleiste{
-  position: fixed;
-  width: 100%;
-  margin: 0px;
-  z-index: 100;
-}
-
-li {
-  margin:  12px 40px 12px 20px;
-  float: right;
-  top: 0px;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.progress-container
-{
-  width: 100%;
-  height: 8px;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-
-.progress-bar{
-  height: 8px;
-  background: rgb(70,0,115);
-  background: linear-gradient(90deg, rgba(70,0,115,1) 0%, rgba(117,0,192,1) 50%, rgba(161,0,255,1) 100%);
-  width: 0%;
-
-}
-
-li a:hover {
-  background-color: #e5e5e5;
-}
+  nav{
+    background-color:whitesmoke;
+    box-shadow: 0 1px 3px 0 #000;
+    height: 80px;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+  }
+  img.logo{
+    padding: 0px;
+    margin-top: -8px;
+    margin-left: 40px;
+  }
+  nav ul{
+    float: right;
+    margin-right: 40px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 7px 19px;
+    border-radius: 3px;
+    text-transform: capitalize;
+  }
+  .listItem.active,.listItem:hover{
+    background: #e5e5e5;
+    transition: .5s;
+  }
+  
+  .checkbtn{
+    font-size: 30px;
+    color: black;
+    float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+  }
+  #check{
+    display: none;
+  }
+  
+  .progress-container
+  {
+    width: 100%;
+    height: 8px;
+    margin-top: -6px;
+    z-index: 1;
+  }
+  
+  .progress-bar{
+    height: 8px;
+    background: rgb(70,0,115);
+    background: linear-gradient(90deg, rgba(70,0,115,1) 0%, rgba(117,0,192,1) 50%, rgba(161,0,255,1) 100%);
+    width: 0%;
+  
+  }
 
 *
 {
@@ -140,7 +152,7 @@ li a:hover {
   
 }
 
-p{
+.para{
   text-align:center;
   text-align: justify;
   text-justify:auto;
@@ -174,8 +186,4 @@ h2{
     text-align: center;
     justify-content: center;
 
-
-
 }
-
-0

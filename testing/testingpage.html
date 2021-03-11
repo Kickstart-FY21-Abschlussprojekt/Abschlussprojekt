@@ -4,31 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./testing2.css" type="text/css">
+    <link rel="stylesheet" href="testing.css" type="text/css">
+    <link rel="stylesheet" href="game.css" type="text/css">
+    <script src="game.js" async></script>
     <title>Testing</title>
 </head>
 
-    <body>
-        <div id="navigationsleiste">
+    <body onload="startGame()">
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+              <i class="fas fa-bars"></i>
+            </label>
+            <a href="/index.html"><img class="logo" src="/res/Accenture-Logo.png" width="140" height="90"></a>
             <ul>
-                <a href="./index.html"><img id="bild" src="Accenture-Logo.png" width="110" height="62" alt="Accenture-Logo"/></a>
-                <li class="listitem1"><a style="color:black; font-size: 15px;font-weight: bold;"href="#Softskill-Training">Softskill-Training</a></li>
-                <li class="listitem2"><a style="color:black; font-size: 15px;font-weight: bold;"href="#Projektmanagement Skills">Projektmanagement Skills</a></li>
-                <li class="listitem3"><a style="color:black; font-size: 15px;font-weight: bold;"href="#Testing">Testing</a></li>
-                <li class="listitem4"><a style="color:black; font-size: 15px;font-weight: bold;"href="#Software Engineering">Software Engineering</a></li>
-                <li class="listitem5"><a style="color:black; font-size: 15px;font-weight: bold;"href="#Business-Analyse">Business-Analyse</a></li>
+              <li><a href="/softskills/softskill.html" class="listItem">Softskill-Training</a></li>
+              <li><a href="#" class="listItem">Projektmanagement-Skills</a></li>
+              <li><a href="/testing/testingpage.html" class="listItem">Testing</a></li>
+              <li><a href="#" class="listItem">Software Engineering</a></li>
+              <li><a href="#" class="listItem">Business-Analyse</a></li>
             </ul>
-        
-                <div class="progress-container">
-                    <div class="progress-bar" id="myBar"></div>
-                    <script src="navigationsleiste.js"></script>
-                </div>
-        </div>
+            <div class="progress-container">
+                <div class="progress-bar" id="myBar"></div>
+                <script src="navigationsleiste.js"></script>
+            </div>
+        </nav>
 
         <div class="container1">
         <h1>Testing</h1>
         <h2> Was ist Testing?</h2>
-        <p> 
+        <p class="para"> 
             Testen ist ganz, wie es das Wort schon sagt, das “Ausprobieren” eines Programms, beziehungsweise eines Systems. 
             Das Ziel solcher Tests ist es Vertrauen zur Qualität des getesteten Systems zu erzeugen und Informationen dazu zu erhalten. Dadurch sollen aber auch Fehler, 
             sowohl aufgedeckt, als auch vorgebeugt werden, sodass die Anforderungen der “Stakeholder” (=Interessensgruppen) erfüllt werden. 
@@ -39,35 +44,58 @@
             
             <div class="grid">
                 <div class="text1"><b>Welche Testziele gibt es?</b></br></br> Allgemein wird zwischen den operativen und informellen Testzielen unterschieden. Bei den sogenannten operativen Testzielen versucht man Fehler im System zu finden, und dessen Funktionalität hinzuweisen. Bei den informellen Testzielen hingegen erzeugt man Vertrauen und versucht neue Informationen zu bekommen. Beide Arten der Testziele gehen Hand in Hand und können nur gemeinsam funktionieren. Softwaretesting führt dementsprechend zur Steigerung der Qualität und Senkung des Risikos von Fehlern.</div>
-                <div class="picture1"><img src= "testing1.jpg.png" style="width: 100%; height: 100%; border-radius: 10px;"></div>
+                <div class="picture1"><img src= "/res/testing1.png" style="width: 100%; height: 100%; border-radius: 10px;"></div>
                 <div class="text2"><b>Wie entstehen Fehler?</b></br></br>Die wohlhäufigste Fehlerhandlung entsteht durch fehlerhafte Arbeit durch Personen. Menschen sind nun einmal keine Maschinen und durch die hohe Komplexität entstehen nun mal Fehler. Daran gekoppelt sind auch, die teilweise unklar definierten Anforderungen, welche wir, hier bei Accenture, mithilfe unserer vielseitigen Tools und Methoden auf das Minimum runterbrechen.</div>
-                <div class="picture2"><img src="testing.jpg.png" style="width: 100%; height: 100%; border-radius: 10px;"></div>
+                <div class="picture2"><img src="/res/testing.png" style="width: 100%; height: 100%; border-radius: 10px;"></div>
             </div>
 
-        
-            
-             <img src="woman-3597101_1920.jpg" alt="Girl" id="pic"> </br></br>
+            <img src="/res/woman-3597101_1920.jpg" alt="Girl" id="pic"> </br></br>
+        </div>
 
-    <p>
+
+        <img img id="accman" src="/res/acc_man.PNG" style="display: none;">
+        <img img id="accman_right" src="/res/acc_man_right.PNG" style="display: none;">
+
+        <p id="testinfo">Navigiere mit den Buttons zu den Boxen um mehr über diese zu erfahren.</p>
+
+        <div id="buttons-container">
+        <button class="button" id="up" onmousedown="moveup()" onmouseup="clearmove()">UP</button> <br></br>
+        <button class="button" id="left" onmousedown="moveleft()" onmouseup="clearmove()">LEFT</button>
+        <button class="button" id="right" onmousedown="moveright()" onmouseup="clearmove()">RIGHT</button><br></br>
+        <button class="button" id="down" onmousedown="movedown()" onmouseup="clearmove()">DOWN</button>
+        </div>
+         
+        <div class="hidden"id="info">
+            <p class="hidden infotext" id="t1">Unit-Testing ist ein Softwareentwicklungsprozess, bei dem die kleinsten prüfbaren Teile oder Einheiten  einer Anwendung, die so genannten Units, einzeln und unabhängig voneinander auf ihren ordnungsgemäßen Betrieb hin untersucht werden.</p>
+            <p class="hidden infotext" id="t2">Component Testing ähnelt sehr dem Unit-Test, allerdings beschäftigt sich Component Testing hauptsächlich mit den einzelnen Objekten bzw. Teilen der gesamten Software und weniger mit den einzelnen Units.</p>
+            <p class="hidden infotext" id="t3">Assembly Tests überprüfen den Einsatz und den kombinierten Betrieb von Komponenten (z.B. Einzelmodule, Schnittstellenmodule, usw.), um die Funktionsfähigkeit der Zusammenarbeit zwischen diesen festzustellen.</p>
+            <p class="hidden infotext" id="t4">Product Testing ist ein Prozess, um die Funktionalität einer Softwareanwendung zu bewerten. Es dient dazu festzustellen, ob die entwickelte Software die spezifizierten Anforderungen erfüllt oder nicht.</p>
+            <p class="hidden infotext" id="t5">User Acceptance Testing (UAT) ist die letzte Phase des reinen Software-Testprozesses, in der überprüft wird, ob ein Produkt oder eine Software für den Zweck geeignet ist, für den es ursprünglich entwickelt wurde. Dabei wird festgestellt, ob die Geschäftsanforderungen erfüllt werden.</p>
+            <p class="hidden infotext" id="t6">Operational Readiness Test (ORT) ist meist der letzte Test und betrachtet das entwickelte Produkt als Ganzes. Ziel dabei ist es festzustellen, ob das fertige Produkt sowie alle anderen Bestandteile der Nutzungsumgebung richtig integriert wurden und den Ansprüchen entsprechend funktionieren.</p>
+            <p class="hidden infotext" id="t7">Performance Testing umfasst jede Art von Softwaretest, bei denen die Faktoren wie Leistung, Responsiveness, Skalierbarkeit, Stabilität, Zuverlässigkeit, Geschwindigkeit oder Ressourcenausnutzung auf die Probe gestellt werden.</p>
+        </div>
+         
+        <button id="restart" onclick="restartGame()">Starte das Spiel erneut!</button>
+
+    <p class="para">
         
         
-        <p>   
+        <p class="para">   
         <h2>Wie läuft Testing ab?</h2>
-        <p>Im Allgemeinen läuft ein Testing in etwa in der Reihenfolge der folgenden Abbildung ab.  
+        <p class="para">Im Allgemeinen läuft ein Testing in etwa in der Reihenfolge der folgenden Abbildung ab.  
             Zunächst einmal scheint es etwas verwirrend, aber im Laufe des Kickstarts werdet ihr die 
             einzelnen Schritte mithilfe unseres jungen und kompetenten Team verstehen.</br></br></br> 
         <h2>Testtechniken</h2>   
-        <p>Statische Testtechniken finden Fehlerzustände im Softwarequellcode und 
+        <p class="para">Statische Testtechniken finden Fehlerzustände im Softwarequellcode und 
             verbessern die Konsistenz/Qualität. Typisch gefundene statisch Fehler sind
             z.B. <b>Anforderungsfehler, Designfehler, Programmierfehler etc.</b>
             Dynamische Testechniken finden Fehlerwirkungen und richten ihren Fokus auf das sichtbare Verhalten.</p>
     
-        </p> 
+    </p> 
 
-            <div style= "display:flex;justify-content: center;align-items: center;">
-                <img src="testing2.jpg.png"
-                style= "width: 700px;"> </br></br>
-                </div>
+        <div style= "display:flex;justify-content: center;align-items: center;">
+            <img src="/res/testing2.png" style= "width: 700px;"> </br></br>
+        </div>
 
                
 
