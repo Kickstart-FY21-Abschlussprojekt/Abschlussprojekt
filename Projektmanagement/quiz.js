@@ -48,8 +48,8 @@ function runGame2(question2) {
 
 function validateAnswer(event) {
     event.preventDefault();
-    let userAnswer = document.getElementById("antwortBox").value;
-    let rightAnswer = calculateAnswer();
+    let userAnswer = document.getElementById("antwortBox").innerHTML.toLowerCase;
+    let rightAnswer = calculateAnswer().toLowerCase;
     let isCorrect = userAnswer === rightAnswer;
 
     if (isCorrect) {
@@ -61,8 +61,8 @@ function validateAnswer(event) {
 }
 function validateAnswer1(event) {
     event.preventDefault();
-    let userAnswer1 = document.getElementById("antwortBox2").value;
-    let rightAnswer1 = calculateAnswer1();
+    let userAnswer1 = document.getElementById("antwortBox2").innerHTML.toLowerCase;
+    let rightAnswer1 = calculateAnswer1().toLowerCase;
     let isCorrect1 = userAnswer1 === rightAnswer1;
 
     if (isCorrect1) {
@@ -73,8 +73,8 @@ function validateAnswer1(event) {
 }
 function validateAnswer0(event) {
     event.preventDefault();
-    let userAnswer2 = document.getElementById("antwortBox1").value;
-    let rightAnswer2 = calculateAnswer2();
+    let userAnswer2 = document.getElementById("antwortBox1").innerHTML.toLowerCase;
+    let rightAnswer2 = calculateAnswer2().toLowerCase;
     let isCorrect2 = userAnswer2 === rightAnswer2;
 
     if (isCorrect2) {
@@ -86,8 +86,8 @@ function validateAnswer0(event) {
 }
 function validateAnswer2(event) {
     event.preventDefault();
-    let userAnswer3 = document.getElementById("antwortBox3").value;
-    let rightAnswer3 = calculateAnswer3();
+    let userAnswer3 = document.getElementById("antwortBox3").innerHTML.toLowerCase;
+    let rightAnswer3 = calculateAnswer3().toLowerCase;
     let isCorrect3 = userAnswer3 === rightAnswer3;
 
     if (isCorrect3) {
@@ -127,8 +127,7 @@ function calculateAnswer3() {
         return answers[i];  
         }
     } 
-}
-
+} 
 function showContent() {
     let card = document.getElementById('content');
     card.classList.add('flip');  
