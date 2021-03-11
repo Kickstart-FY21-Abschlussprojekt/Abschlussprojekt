@@ -232,7 +232,7 @@ h1 {
     
   }
   #projektmanagement {
-    background-image:url(/res/Front4.jpg) ;
+    background-image:url(./res/Front4.jpg) ;
     background-repeat: no-repeat;
     background-size: cover ;
   }
@@ -319,7 +319,7 @@ h1 {
 }
   .input:focus{
     outline: none !important;
-    border-color: blue;
+    border-color: #7500c0;
   }
 
 #nachricht {
@@ -380,6 +380,11 @@ footer {
 .WatsonAssistantChatHost{
   position: fixed;
   z-index: 0;
+}
+
+#kartenlink{
+  color:black;
+  font-weight:bold;
 }
 
 @media (max-width: 1182px){
