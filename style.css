@@ -219,59 +219,59 @@ h1 {
     text-decoration: Underline;
   }
   #softskill {
-    background-image: url(/res/Front2.jpg);
+    background-image: url(./res/Front2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     
   }
   #softskill-back {
-    background-image:url(/res/pexels-soumil-kumar-735911.jpg) ;
+    background-image:url(./res/pexels-soumil-kumar-735911.jpg) ;
     background-repeat: no-repeat;
     background-size: cover;
     
     
   }
   #projektmanagement {
-    background-image:url(/res/Front4.jpg) ;
+    background-image:url(./res/Front4.jpg) ;
     background-repeat: no-repeat;
     background-size: cover ;
   }
   #projektmanagement-back {
-    background-image: url(/res/pexels-lukas-6696151.jpg);
+    background-image: url(./res/pexels-lukas-6696151.jpg);
     background-repeat: no-repeat;
     background-size: cover ;
     
   }
   #testing {
-    background-image: url(/res/Front6.jpg);
+    background-image: url(./res/Front6.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
   #testing-back {
-    background-image: url(/res/pexels-thisisengineering-38626321.jpg);
+    background-image: url(./res/pexels-thisisengineering-38626321.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
   #bA {
-    background-image: url(/res/Front5.jpg);
+    background-image: url(./res/Front5.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     
 
   }
   #bA-back {
-    background-image: url(/res/pexels-fauxels-3183153.jpg);
+    background-image: url(./res/pexels-fauxels-3183153.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     
   }
   #sE {
-    background-image: url(/res/Front.jpg);
+    background-image: url(./res/Front.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
   #sE-back {
-    background-image: url(/res/pexels-luis-gomes-546819.jpg);
+    background-image: url(./res/pexels-luis-gomes-546819.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -380,6 +380,11 @@ footer {
 .WatsonAssistantChatHost{
   position: fixed;
   z-index: 0;
+}
+
+#kartenlink{
+  color:black;
+  font-weight:bold;
 }
 
 @media (max-width: 1182px){
