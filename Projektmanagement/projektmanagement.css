@@ -107,12 +107,13 @@
 .grid-container {
     display: grid;
     grid-template-columns: 49% 49%;
-    grid-template-rows: 220px 220px;
+    grid-template-rows: 47% 47%;
     grid-gap: 20px 20px;
     grid-template-areas: 
         "text1 text2"
         "text3 text4";
     width: 740px;
+    height: 460px;
     justify-content: center;
     justify-items: stretch;
     margin: auto;
@@ -177,7 +178,7 @@ p{
     justify-content: center;
 }
 h1 {
-    font-size: 70px;
+    font-size: 90px;
     margin-top:20px;
     margin-bottom:30px;
     text-align: center;
@@ -221,6 +222,7 @@ footer {
     background-color: #f2f2f2;
     border: 1px solid black;
     font-weight: bold;
+    z-index: 1;
   }
 
   #footerhref {
@@ -238,7 +240,15 @@ footer {
     text-align: center;
     padding-top: 10px;
   }
-
+  .WatsonAssistantChatHost{
+    position: fixed;
+    z-index: 0;
+  }
+  
+  #kartenlink{
+    color:black;
+    font-weight:bold;
+  }
 
 @media (max-width: 1182px){
     img.logo{
@@ -340,14 +350,34 @@ footer {
     #check:checked ~ ul{
       left: 0;
     }
-    .container{
-      width: 90%;
+    .grid-container{
+        width: 620px;
+        grid-template-columns: 49% 49%;
+        grid-template-rows: 47% 47%;
+        grid-gap: 15px 15px;
+        height: 385px;
+        margin: auto;
+    }
+    #content {
+        font-size: x-small;
+    }
+    #content1 {
+        font-size: x-small;
+    }
+    #content2 {
+        font-size: x-small;
+    }
+    #content3 {
+        font-size: x-small;
     }
     h1{
       font-size: 80px;
     }
     p{
       font-size: 14px;
+    }
+    .text {
+        font-size: 14px;
     }
     .top-right{
       font-size: 40px;
@@ -364,14 +394,43 @@ footer {
   }
   @media (max-width: 700px){
     h1{
-      font-size: 70px;
+      font-size: 60px;
+      text-justify: auto;
+      width: 90%;
     }
     p{
       font-size: 12px;
       width: 90%;
     }
-    .container{
-      width: 90%;
+    .text {
+        font-size: 12px;
+        width: 90%;
+    }
+    .grid-container{
+        width: 500px;
+        grid-template-columns: 49% 49%;
+        grid-template-rows: 47% 47%;
+        grid-gap: 10px 10px;
+        height: 310px;
+        margin: auto;
+    }
+    #content {
+        font-size: xx-small;
+    }
+    #content1 {
+        font-size: xx-small;
+    }
+    #content2 {
+        font-size: xx-small;
+    }
+    #content3 {
+        font-size: xx-small;
+        
+    }
+    .subheading {
+        text-align: center;
+        margin: auto;
+        width: 400px;
     }
     .top-right{
       font-size: 30px;
@@ -401,4 +460,40 @@ footer {
     top: 96px;
     right: 16px;
   }
-  
+  @media (max-width: 500px){
+      h1 {
+        font-size: 40px;
+        text-align: center;
+        width: 90%;
+        margin: auto;
+        margin-bottom: 15px;
+      }
+      .subheading {
+        text-align: center;
+        margin: auto;
+        width: 300px;
+        font-size: x-large;;
+      }
+      .grid-container{
+        max-width: 400px;
+        grid-template-columns: 49% 49%;
+        grid-template-rows: 47% 47%;
+        grid-gap: 10px 10px;
+        height: 248px;
+        justify-content: center;
+        justify-items: stretch;
+        margin: auto;
+      }
+      #content {
+        font-size: xx-small;
+      }
+      #content1 {
+        font-size: xx-small;
+      }
+      #content2 {
+        font-size: xx-small;
+      }
+      #content3 {
+        font-size: xx-small;   
+      }
+  }
