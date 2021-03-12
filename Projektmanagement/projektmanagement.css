@@ -171,7 +171,7 @@ content: '';
    border-radius: 0;
    margin-top: -250px;
 } 
-.card:hover h2 {
+.card:hover h10 {
    background: 5D3A73;
    color: white;
    margin-top: 70px;
