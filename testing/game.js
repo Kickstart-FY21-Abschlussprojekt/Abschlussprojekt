@@ -172,7 +172,7 @@ function restartGame(){
     document.getElementById(id).classList.add("hidden");
     }
     id="";
-    window.scrollTo(0, 1440);
+    window.scrollTo(0, 1445);
     startGame();
 
 }
