@@ -12,7 +12,7 @@ width: 400px;
 
 }
 
-.button{
+.buttonGame{
 
     width: 80px;
     height: 50px;
@@ -23,14 +23,14 @@ width: 400px;
     border: 1px solid white;
 }
 
-.button:active{
+.buttonGame:active{
 
     background-color: white;
     color: #7500c0;
     border-color:#7500c0;
     outline: none;
 }
-.button:focus{
+.buttonGame:focus{
 
     outline: none;
 }
