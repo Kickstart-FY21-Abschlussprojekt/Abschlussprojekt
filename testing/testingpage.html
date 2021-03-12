@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="testing.css" type="text/css">
     <link rel="stylesheet" href="game.css" type="text/css">
-    <script src="game.js" async></script>
     <link rel="Stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="game.js" async></script>
     <title>Testing</title>
     <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
@@ -92,14 +92,14 @@
         <img img id="accman_right" src="/res/acc_man_right.PNG" style="display: none;">
         
     <div id="game-container">
-        
-        <p id="testinfo">Navigiere mit den Buttons zu den Boxen um mehr über diese zu erfahren.</p>
-
-        <div id="buttons-container">
-        <button class="buttonGame" id="up" onmousedown="moveup()" onmouseup="clearmove()">UP</button> <br></br>
-        <button class="buttonGame" id="left" onmousedown="moveleft()" onmouseup="clearmove()">LEFT</button>
-        <button class="buttonGame" id="right" onmousedown="moveright()" onmouseup="clearmove()">RIGHT</button><br></br>
-        <button class="buttonGame" id="down" onmousedown="movedown()" onmouseup="clearmove()">DOWN</button>
+        <div id ="ui">
+            
+            <div id="buttons-container">
+                <button class="buttonGame" id="up" onmousedown="moveup()" onmouseup="clearmove()">UP</button> <br></br>
+                <button class="buttonGame" id="left" onmousedown="moveleft()" onmouseup="clearmove()">LEFT</button>
+                <button class="buttonGame" id="right" onmousedown="moveright()" onmouseup="clearmove()">RIGHT</button><br></br>
+                <button class="buttonGame" id="down" onmousedown="movedown()" onmouseup="clearmove()">DOWN</button>
+            </div>
         </div>
          
         <div class="hidden"id="info">

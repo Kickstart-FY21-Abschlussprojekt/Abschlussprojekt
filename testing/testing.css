@@ -437,6 +437,7 @@ footer {
   
 }
 .container2{
+  clear: both;
   margin: auto;
   margin-top:60px;
   
@@ -473,6 +474,13 @@ h2{
 .WatsonAssistantChatHost{
   position: fixed;
   z-index: 0;
+}
+#game-container{
+
+  clear:both;
+  width: 100%;
+  margin: auto;
+
 }
 
 @media (max-width: 1182px){
@@ -550,7 +558,7 @@ h2{
     height: 100vh;
     background: #e5e5e5;
     top: 80px;
-    left: -100%;
+    left: -110%;
     text-align: center;
     transition: all .5s;
   }
