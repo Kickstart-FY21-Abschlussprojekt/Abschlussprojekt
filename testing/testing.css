@@ -496,11 +496,6 @@ h2{
     background: #e5e5e5;
     transition: .5s;
   }
-  #game-container{
-
-    display: none;
-    
-  }
 }
 
 @media (max-width: 1100px){
@@ -587,6 +582,11 @@ h2{
   }
   #copyright{
     font-size: 12px;
+  }
+  #game-container{
+
+    display: none;
+    
   }
 }
 @media (max-width: 700px){
