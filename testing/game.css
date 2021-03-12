@@ -108,3 +108,10 @@ margin-left: 100px;
     grid-template-columns: 50% 50%;
 
 }
+
+#anleitung{
+
+    text-align: center;
+    width: 280px;
+    font-weight: bold;
+}
