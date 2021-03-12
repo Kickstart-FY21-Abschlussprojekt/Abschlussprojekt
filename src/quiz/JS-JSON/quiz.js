@@ -73,12 +73,25 @@ function buildNextQuestion(id) {
         $('#quiz-option').append(
             `<div name="answersblock">         
             </div>` 
-        );
-        $('div[name="answersblock"]').append(
-            `Herzlichen Glückwunsch, Sie haben das Quiz hier beendet.
-            Dabei haben Sie ${Pscore}/${dif} richtig beantwortet.
-            Weiter so ...`
-        );
+        )
+        ;firebase.database().ref("0/questionsAverage").get().then( function(snapshot) {
+            let average = snapshot.val();
+            console.log(average);
+            let upDown;
+            if (average < Pscore) {
+                upDown = "über";
+            }
+            else{
+                upDown = "unter";
+            }
+            average = Math.floor(average* 100) / 100;
+            $('div[name="answersblock"]').append(
+                `Herzlichen Glückwunsch, 
+                Sie haben das Quiz hier beendet. <br> Dabei haben Sie ${Pscore}/${dif} richtig beantwortet.
+                Im Durchschnitt wurden  ${average} Fragen richtig beantwortet,
+                damit liegen Sie ${upDown} den Durchschnitt.`
+            );
+        });
     }
 };
 
