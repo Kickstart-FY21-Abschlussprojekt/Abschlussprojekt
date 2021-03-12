@@ -1,10 +1,11 @@
+let sID = 1;
 let Quiz ={
-    build: function(QID= 1){
+    build(QID = 1){
         this.qid = QID;
         firebase.database().ref(`${this.qid}/`).once("value").then(function(sn) {
             var question=sn.val().question;
             var id = sn.val().id;
-            document.getElementById(`question:${QID}`).innerHTML=question;
+            document.getElementById(`questions:${QID}`).innerHTML=question;
             let ans = [];
             firebase.database().ref(`${QID}/answers`).once("value").then(function(snapshort) {
                 snapshort.forEach(snap => {
@@ -18,50 +19,56 @@ let Quiz ={
                         </div>`
                     );
                 });
-                document.getElementById(`quiz-options:${QID}`).innerHTML = ans.join('');
+                document.getElementById(`quiz-option:${QID}`).innerHTML = ans.join('');
+                document.getElementById(`submit-btn:${QID}`).addEventListener('click', Quiz.showResult(QID));
             });
         });
-        function getUserAnswer(){
-            //Getting the Value of the User Choosen Answer 
-            var asnwer = document.getElementById(`quiz:${QID}`).elements['question'];
-            for (var i = 0; i < asnwer; i++) {
-               asnwer[i].onclick = function() {
-               return asnwer.value;
-                };
-            };  
-        };
-        getUserAnswer();
-        Quiz.showResult(this.qid);
-
     },
-    showResult: function(qid){
+    
+    showResult(qid){
         //get final Entered Answer via URL
         let urlParams =  new URLSearchParams(document.location.search.substring(1));
         let UserAnswer= urlParams.get(`q${qid}`);
         firebase.database().ref(`${qid}/`).once("value").then(function(sn) {
             var rA=sn.val().rightAnswer;
             //Check for correctnes
+            outer_block:{
             if(UserAnswer){
-                if(UserAnswer == rA){
-                    //What happens after the correct answer is given?
-                    alert("Right Answer")
-
-                }else{
-                    //What happens after a wrong anser is given?
-                    console.log("Wrong Answer");
-                };
+                let result = "";
+                inner_block:{
+                    if(UserAnswer == rA){
+                        result = "richtig";
+                        break inner_block;
+                    }else{  
+                        result = "falsch";
+                        break inner_block;
+                    };
+                } 
+                let output = [];
+                    output.push(
+                        `<div> Du hast die Frage ${result} beantwortet</div>
+                        <div>
+                            <button class="button" id="next">Next Question</button>
+                        </div>`
+                    );
+                    console.log(`qid: ${qid}`)
+                    document.getElementById('next').addEventListener('click', nextQuestion(qid));
+                    test = test +1;
+                    console.log(`test: ${test}`)
+                    
+                    //Update Global Scoreboard  
+                    Quiz.globalScore((UserAnswer == rA));                             
             };
-            //Update Global Scoreboard
-            Quiz.globalScore((UserAnswer == rA));
-        });
+        };
+                
             
+        });
     },
-    globalScore: function(correctAnswer){    
+    globalScore(correctAnswer){    
         const questionsPerQuiz = 1;
          //Abrufen, addieren und hinzufügen der Statistiken
         firebase.database().ref("0/").get().then( function(snapshot) {
             if (snapshot.exists()) {
-              console.log(snapshot.val());
               var data = snapshot.val();
               var globalCountCorrect;
 
@@ -78,13 +85,12 @@ let Quiz ={
                 {
                 questionsCorrect: globalCountCorrect,
                 questionsAll: globalCountQuestion,
-                questionsAverage: globalCountCorrect/globaCountPeople
+                questionsAverage: globalCountCorrect/globalCountPeople
                     }
                   );
                 }
                 else {
                   console.log("No data available");
                 }});
-    }
-};
-Quiz.build();
+    },
+}
