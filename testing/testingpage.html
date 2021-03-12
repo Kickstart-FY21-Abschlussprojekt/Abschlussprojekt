@@ -4,8 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/res/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="testing.css" type="text/css">
     <link rel="stylesheet" href="game.css" type="text/css">
+    <link rel="Stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="game.js" async></script>
 
     <title>Testing</title>
@@ -15,7 +18,6 @@
 
     <script src="/src/quiz/JS-JSON/quiz.js" async ></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
     <script>
         var firebaseConfig = {
             apiKey: "AIzaSyBqLdKaS_sz3mFga0cw_10ltMVIxBQOEZ4",
@@ -31,7 +33,8 @@
     </script>
 </head>
 
-    <body onload="startGame(); innit(18,23)">
+<body onload="startGame(); innit(18,23)">
+
         <nav>
             <input type="checkbox" id="check">
             <label for="check" class="checkbtn">
@@ -47,9 +50,25 @@
             </ul>
             <div class="progress-container">
                 <div class="progress-bar" id="myBar"></div>
-                <script src="navigationsleiste.js"></script>
+                <script src="script.js"></script>
             </div>
         </nav>
+
+        <div>
+            <script>
+                window.watsonAssistantChatOptions = {
+                integrationID: "f05a08ea-c453-489e-a820-0e23c03a45bb", // The ID of this integration.
+                region: "eu-de", // The region your integration is hosted in.
+                serviceInstanceID: "0c5b70fc-6648-48ff-9d11-d74e00eb5306", // The ID of your service instance.
+                onLoad: function(instance) { instance.render(); }
+                };
+                setTimeout(function(){
+                const t=document.createElement('script');
+                t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+                document.head.appendChild(t);
+                });
+            </script>
+        </div>
 
         <div class="container1">
         <h1>Testing</h1>
@@ -77,15 +96,16 @@
         <img img id="accman" src="/res/acc_man.PNG" style="display: none;">
         <img img id="accman_right" src="/res/acc_man_right.PNG" style="display: none;">
         
-        <div id="game-container">
-        
-        <p id="testinfo">Navigiere mit den Buttons zu den Boxen um mehr über diese zu erfahren.</p>
-
-        <div id="buttons-container">
-        <button class="buttonGame" id="up" onmousedown="moveup()" onmouseup="clearmove()">UP</button> <br></br>
-        <button class="buttonGame" id="left" onmousedown="moveleft()" onmouseup="clearmove()">LEFT</button>
-        <button class="buttonGame" id="right" onmousedown="moveright()" onmouseup="clearmove()">RIGHT</button><br></br>
-        <button class="buttonGame" id="down" onmousedown="movedown()" onmouseup="clearmove()">DOWN</button>
+    <div id="game-container">
+        <div id ="ui">
+            
+            <div id="buttons-container">
+                <p id="anleitung">Navigiere zu den Boxen um mehr über sie zu erfahren!</p>
+                <button class="buttonGame" id="up" onmousedown="moveup()" onmouseup="clearmove()">UP</button> <br></br>
+                <button class="buttonGame" id="left" onmousedown="moveleft()" onmouseup="clearmove()">LEFT</button>
+                <button class="buttonGame" id="right" onmousedown="moveright()" onmouseup="clearmove()">RIGHT</button><br></br>
+                <button class="buttonGame" id="down" onmousedown="movedown()" onmouseup="clearmove()">DOWN</button>
+            </div>
         </div>
          
         <div class="hidden"id="info">
@@ -100,27 +120,27 @@
         
         <button id="restart" onclick="restartGame()">Starte das Spiel erneut!</button>
     </div>
-    <p class="para">
+    <div class="container2">
         
         
         <p class="para">   
         <h2>Wie läuft Testing ab?</h2>
         <p class="para">Im Allgemeinen läuft ein Testing in etwa in der Reihenfolge der folgenden Abbildung ab.  
             Zunächst einmal scheint es etwas verwirrend, aber im Laufe des Kickstarts werdet ihr die 
-            einzelnen Schritte mithilfe unseres jungen und kompetenten Teams verstehen.</br></br></br> 
+            einzelnen Schritte mithilfe unseres jungen und kompetenten Teams verstehen.</p>
         <h2>Testtechniken</h2>   
         <p class="para">Statische Testtechniken finden Fehlerzustände im Softwarequellcode und 
             verbessern die Konsistenz/Qualität. Typisch gefundene statische Fehler sind
             z.B. <b>Anforderungsfehler, Designfehler, Programmierfehler etc.</b>
             Dynamische Testechniken finden Fehlerwirkungen und richten ihren Fokus auf das sichtbare Verhalten.</p>
+        </p>
     
-    </p> 
+    </div> 
 
-        <div style= "display:flex;justify-content: center;align-items: center;">
-            <img src="/res/testing2.png" style= "width: 700px;"> </br></br>
-        </div></br></br></br>
-
+        <div id="unteresBild" style= "display:flex;justify-content: center;align-items: center;">
+            <img src="/res/testing2.png" style= "width: 700px;">
         </div>
+
         <footer>
             <a id="footerhref" href="../index.html#contact">Kontakt</a>
             <div id="copyright">&lt;/&gt; with 💜 by Kickstart FY21</div>
@@ -144,5 +164,5 @@
                 
     </div>
         
-    </body>
+ </body>
 </html>
