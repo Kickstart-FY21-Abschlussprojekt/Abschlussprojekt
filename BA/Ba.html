@@ -11,7 +11,10 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
-    <script src="/src/quiz/JS-JSON/quizFirebase.js" async defer></script>
+
+    <script src="/src/quiz/JS-JSON/quiz.js" async></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <script>
         var firebaseConfig = {
             apiKey: "AIzaSyBqLdKaS_sz3mFga0cw_10ltMVIxBQOEZ4",
@@ -24,9 +27,9 @@
         };
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
-        </script>
+    </script>
 </head>
-
+<body onload="innit(18,23)">
 <nav>
     <input type="checkbox" id="check">
     <label for="check" class="checkbtn">
@@ -46,7 +49,7 @@
     </div>
 </nav>
 
-<div>
+<div >
     <script>
         window.watsonAssistantChatOptions = {
         integrationID: "f05a08ea-c453-489e-a820-0e23c03a45bb", // The ID of this integration.
@@ -102,7 +105,7 @@
             <div id="copyright">&lt;/&gt; with 💜 by Kickstart FY21</div>
         </footer>
     </div>
-    <div onload="Quiz.build(1)">
+    <div>
 
         <!--TEST-->
            
@@ -111,12 +114,13 @@
             <h10 class="transition" id="questions"></h10>    
             </div>
             <div class="answers" id="quiz-option"></div>
-            <div class="cta-container transition"><button id="submit-btn" class="btn-animated">Submit</button></div>
-            <div class="card_circle transition"></div>
+            <div class="cta-container transition"><button id="submit-btn" class="btn-animated button" type="button">Submit</button></div>
+            <div class="card_circle transition "></div>
         </form>
         <div class="spacerQuiz"></div>
+
         <!--TEST-->
                 
     </div>
-    </body>
+</body>
 </html>
