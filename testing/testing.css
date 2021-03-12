@@ -624,10 +624,13 @@ h2{
   #copyright{
     font-size: 10px;
   }
+  #unteresBild{
+    width: 90%;
+  }
 }
 @media (max-width: 500px){
   
   #unteresBild{
-    width: 300px;
+    width: 200px;
   }
 }
