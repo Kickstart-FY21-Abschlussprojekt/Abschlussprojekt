@@ -17,7 +17,7 @@ function QuestionBuilder(id) {
     //Holen der Frage an der id:
     firebase.database().ref(`${id}/`).once("value").then(function(sn) {
         var question=sn.val().question;
-        $( "#question" ).append( `<div id="QuestionContainer">${question}</div>` );
+        $( "#questions" ).append( `<div id="QuestionContainer">${question}</div>` );
     });
 
     //Abrufen und Bauen der Antwortmöglichkeiten:
@@ -46,7 +46,7 @@ function buildNextQuestion(id) {
         firebase.database().ref(`${idNow}/`).once("value").then(function(sn) {
             var question=sn.val().question;
             $('#QuestionContainer').remove();
-            $( "#question" ).append( `<div id="QuestionContainer">${question}</div>` );
+            $( "#questions" ).append( `<div id="QuestionContainer">${question}</div>` );
         });
         $('div[name="answersblock"]').remove();
         firebase.database().ref(`${idNow}/answers`).once("value").then(function(snapshort) {
@@ -65,16 +65,37 @@ function buildNextQuestion(id) {
 
     }else{
         //Ende dieser Sektion erreicht
-        $( "#Quiz" ).append(
-            `<div id ="NextQuestionTAG"> Sie haben das Ende dieses Quizes erreicht.
-            Dabei haben sie von ${dif} Fragen, ${Pscore} richtig beantwortet.</div>`
-        );
+        $('#QuestionContainer').remove();
+        $("#submit-btn").remove();
+        $( "#quiz-option" ).show();
+        $('div[name="answersblock"]').remove();
+        $('#quiz-option').append(
+            `<div name="answersblock">         
+            </div>` 
+        )
+        ;firebase.database().ref("0/questionsAverage").get().then( function(snapshot) {
+            let average = snapshot.val();
+            let upDown;
+            if (average < Pscore) {
+                upDown = "über";
+            }
+            else{
+                upDown = "unter";
+            }
+            average = Math.floor(average* 100) / 100;
+            $('div[name="answersblock"]').append(
+                `Herzlichen Glückwunsch, 
+                Sie haben das Quiz hier beendet. <br> Dabei haben Sie ${Pscore}/${dif} richtig beantwortet.
+                Im Durchschnitt wurden  ${average} Fragen richtig beantwortet,
+                damit liegen Sie ${upDown} den Durchschnitt.`
+            );
+        });
     }
 };
 
 //GlobalScore
 function globalScore(correctAnswer){    
-    const questionsPerQuiz = 1;
+    const questionsPerQuiz = 6;
      //Abrufen, addieren und hinzufügen der Statistiken
     firebase.database().ref("0/").get().then( function(snapshot) {
         if (snapshot.exists()) {
@@ -120,10 +141,10 @@ $("#submit-btn").click(function(){
             }
         $( "#quiz-option" ).hide();
         $("#submit-btn").hide();
-        $( "#Quiz" ).append(
-            `<div id ="NextQuestionTAG"> Du hast die Frage ${result} beantwortet</div>
-                <div id ="NextQuestionTAG">
+        $( "#quiz" ).append(
+            `<div class="answers" id ="NextQuestionTAG"> Du hast die Frage ${result} beantwortet.
                     <button class="button" id="next-btn" type="button">Next Question</button>
+                
                 </div>`
             );
         globalScore(uA == rA);

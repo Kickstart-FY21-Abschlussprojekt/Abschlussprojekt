@@ -49,7 +49,7 @@ html, body {
   min-width: 40px;
   min-height: 8px;
   font-family: 'Arial', Arial, Helvetica, sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 400;
@@ -79,14 +79,9 @@ content: '';
   opacity: 0;
   transition: all .3s ease-in-out 0s;
 }
-
 .button:hover, .button:focus {
   color: white;
   transform: translateY(-6px);
-}
-
-button:hover::before, button:focus::before {
-  opacity: 1;
 }
 
 button::after {
@@ -106,6 +101,10 @@ button:hover::after, button:focus::after {
   display: none;
 }
 
+#submit-btn {
+  margin-top: 20px;
+}
+
 @keyframes ring {
   0% {
     width: 5px;
@@ -113,8 +112,8 @@ button:hover::after, button:focus::after {
     opacity: 1;
   }
   100% {
-    width: 110px;
-    height: 110px;
+    width: 90px;
+    height: 90px;
     opacity: 0;
   }
 }
@@ -134,22 +133,6 @@ button:hover::after, button:focus::after {
 
 }
 
-.progress-container
-{
- width: 100%;
- height: 8px;
- position: sticky;
- top: 0;
- z-index: 1;
-}
-
-.progress-bar{
- height: 8px;
- background: rgb(70,0,115);
- background: linear-gradient(90deg, rgba(70,0,115,1) 0%, rgba(117,0,192,1) 50%, rgba(161,0,255,1) 100%);
- width: 0%;
-
-}
 
 /*TEST*/
 
@@ -183,7 +166,7 @@ button:hover::after, button:focus::after {
    border-radius: 0;
    margin-top: -250px;
 } 
-.card:hover h2 {
+.card:hover h10 {
    background: 5D3A73;
    color: white;
    margin-top: 70px;
@@ -239,7 +222,7 @@ h10 {
    margin-left: 10px;
    position: absolute;
    text-align: justify;
-   z-index: 9999;
+   z-index: 10000;
    row-gap: 7px;
 
 }
@@ -343,21 +326,6 @@ nav ul li a{
   display: none;
 }
 
-.progress-container
-{
-  width: 100%;
-  height: 8px;
-  margin-top: -6px;
-  z-index: 1;
-}
-
-.progress-bar{
-  height: 8px;
-  background: rgb(70,0,115);
-  background: linear-gradient(90deg, rgba(70,0,115,1) 0%, rgba(117,0,192,1) 50%, rgba(161,0,255,1) 100%);
-  width: 0%;
-
-}
 *{
     padding: 0;
     margin: 0;
@@ -416,21 +384,7 @@ nav ul li a{
     display: none;
   }
   
-  .progress-container
-  {
-    width: 100%;
-    height: 8px;
-    margin-top: -6px;
-    z-index: 1;
-  }
-  
-  .progress-bar{
-    height: 8px;
-    background: rgb(70,0,115);
-    background: linear-gradient(90deg, rgba(70,0,115,1) 0%, rgba(117,0,192,1) 50%, rgba(161,0,255,1) 100%);
-    width: 0%;
-  
-  }
+ 
   
   h1 {
       font-size: 70px;
@@ -591,6 +545,7 @@ nav ul li a{
     nav ul{
       float: right;
       margin-right: 40px;
+      z-index: 10000;
     }
     nav ul li{
       display: inline-block;
@@ -626,6 +581,7 @@ nav ul li a{
       left: -100%;
       text-align: center;
       transition: all .5s;
+      z-index: 10000;
     }
     nav ul li{
       display: block;

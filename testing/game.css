@@ -21,6 +21,7 @@ width: 400px;
     background-color: #7500c0;
     color: white;
     border: 1px solid white;
+    cursor: pointer;
 }
 
 .buttonGame:active{
