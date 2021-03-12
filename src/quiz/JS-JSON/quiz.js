@@ -65,7 +65,6 @@ function buildNextQuestion(id) {
 
     }else{
         //Ende dieser Sektion erreicht
-        console.log("test");
         $('#QuestionContainer').remove();
         $("#submit-btn").remove();
         $( "#quiz-option" ).show();
@@ -76,7 +75,6 @@ function buildNextQuestion(id) {
         )
         ;firebase.database().ref("0/questionsAverage").get().then( function(snapshot) {
             let average = snapshot.val();
-            console.log(average);
             let upDown;
             if (average < Pscore) {
                 upDown = "über";
