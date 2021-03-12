@@ -46,11 +46,13 @@ function runGame2(question2) {
     showQuestion3(question3);    
  }
 
-function validateAnswer(event) {
+function validateAnswer1(event) {
     event.preventDefault();
-    let userAnswer = document.getElementById("antwortBox").value;
+    let userAnswer = document.getElementById("antwortBox1").value;
     let rightAnswer = calculateAnswer();
-    let isCorrect = userAnswer === rightAnswer;
+    let isCorrect = userAnswer.toString().toLowerCase() === rightAnswer.toLowerCase();
+    console.log(rightAnswer.toLowerCase());
+    console.log(userAnswer.toString().toLowerCase());
 
     if (isCorrect) {
         this.addEventListener('submit', showContent);
@@ -59,38 +61,43 @@ function validateAnswer(event) {
     }
     
 }
-function validateAnswer1(event) {
+function validateAnswer2(event) {
     event.preventDefault();
-    let userAnswer1 = document.getElementById("antwortBox2").value;
-    let rightAnswer1 = calculateAnswer1();
-    let isCorrect1 = userAnswer1 === rightAnswer1;
-
-    if (isCorrect1) {
+    let userAnswer = document.getElementById("antwortBox2").value;
+    let rightAnswer = calculateAnswer1();
+    let isCorrect = userAnswer.toString().toLowerCase() === rightAnswer.toLowerCase();
+    console.log(rightAnswer.toLowerCase());
+    console.log(userAnswer.toString().toLowerCase());
+    if (isCorrect) {
         this.addEventListener('submit', showContent1);
     } else {
         newTry1();
     }
 }
-function validateAnswer0(event) {
+function validateAnswer3(event) {
     event.preventDefault();
-    let userAnswer2 = document.getElementById("antwortBox1").value;
-    let rightAnswer2 = calculateAnswer2();
-    let isCorrect2 = userAnswer2 === rightAnswer2;
+    let userAnswer = document.getElementById("antwortBox3").value;
+    let rightAnswer = calculateAnswer2();
+    let isCorrect = userAnswer.toString().toLowerCase() === rightAnswer.toLowerCase();;
+    console.log(rightAnswer.toLowerCase());
+    console.log(userAnswer.toString().toLowerCase());
 
-    if (isCorrect2) {
+    if (isCorrect) {
         this.addEventListener('submit', showContent2);
     } else {
         newTry2();
     }
     
 }
-function validateAnswer2(event) {
+function validateAnswer4(event) {
     event.preventDefault();
-    let userAnswer3 = document.getElementById("antwortBox3").value;
-    let rightAnswer3 = calculateAnswer3();
-    let isCorrect3 = userAnswer3 === rightAnswer3;
+    let userAnswer = document.getElementById("antwortBox4").value;
+    let rightAnswer = calculateAnswer3();
+    let isCorrect = userAnswer.toString().toLowerCase() === rightAnswer.toLowerCase();
+    console.log(rightAnswer.toLowerCase());
+    console.log(userAnswer.toString().toLowerCase());
 
-    if (isCorrect3) {
+    if (isCorrect) {
         this.addEventListener('submit', showContent3);
     } else {
         newTry3();
@@ -99,7 +106,7 @@ function validateAnswer2(event) {
 
 function calculateAnswer() {
     for (let i = 0; i <= questions.length; i ++) {
-        if (document.getElementById("question").innerHTML === questions[i]) {
+        if (document.getElementById("question1").innerHTML === questions[i]) {
         return answers[i];  
         }
     }  
@@ -107,7 +114,7 @@ function calculateAnswer() {
 
 function calculateAnswer1() {
     for (let i = 0; i <= questions.length; i ++) {
-        if (document.getElementById("question1").innerHTML === questions[i]) {
+        if (document.getElementById("question2").innerHTML === questions[i]) {
         return answers[i];  
         }
     } 
@@ -115,7 +122,7 @@ function calculateAnswer1() {
 
 function calculateAnswer2() {
     for (let i = 0; i <= questions.length; i ++) {
-        if (document.getElementById("question0").innerHTML === questions[i]) {
+        if (document.getElementById("question3").innerHTML === questions[i]) {
         return answers[i];  
         }
     }  
@@ -123,23 +130,22 @@ function calculateAnswer2() {
 
 function calculateAnswer3() {
     for (let i = 0; i <= questions.length; i ++) {
-        if (document.getElementById("question2").innerHTML === questions[i]) {
+        if (document.getElementById("question4").innerHTML === questions[i]) {
         return answers[i];  
         }
     } 
-}
-
+} 
 function showContent() {
     let card = document.getElementById('content');
     card.classList.add('flip');  
 } 
 
 function showContent1() {
-    let card1 = document.getElementById('content2');
+    let card1 = document.getElementById('content1');
     card1.classList.add('flip');
 }
 function showContent2() {
-    let card2 = document.getElementById('content1');
+    let card2 = document.getElementById('content2');
     card2.classList.add('flip');  
 } 
 
@@ -149,21 +155,21 @@ function showContent3() {
 }
 
 function showQuestion(question) {
-    document.getElementById("question").textContent = question;
+    document.getElementById("question1").textContent = question;
    
 }
 
 function showQuestion1(question1) {
-    document.getElementById("question1").textContent = question1;
+    document.getElementById("question2").textContent = question1;
    
 }
 
 function showQuestion2(question2) {
-    document.getElementById("question0").textContent = question2;
+    document.getElementById("question3").textContent = question2;
    
 }
 
 function showQuestion3(question3) {
-    document.getElementById("question2").textContent = question3;
+    document.getElementById("question4").textContent = question3;
    
 }

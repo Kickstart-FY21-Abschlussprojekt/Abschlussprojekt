@@ -363,42 +363,42 @@ h10 {
     grid-area: text1;
     border: Solid black;
     border-radius: 10px;
-    background-color: rgb(250, 238, 223);
+    background: linear-gradient(90deg, rgba(70,0,115,1) 0%, rgba(117,0,192,1) 100%);
     padding: 5px;
     font-size: small;
 }
 #content1 {
-    grid-area: picture1;
+    grid-area: text2;
     border: Solid black;
     border-radius: 10px;
-    background-color: rgb(250, 238, 223);
+    background: linear-gradient(90deg, rgba(70,0,115,1) 0%, rgba(117,0,192,1) 100%);
     padding: 5px;
     font-size: small;
 }
 #content2 {
-    grid-area: text2;
+    grid-area: text3;
     border: Solid black;
     border-radius: 10px;
-    background-color: rgb(250, 238, 223);
+    background: linear-gradient(90deg, rgba(70,0,115,1) 0%, rgba(117,0,192,1) 100%);
     padding: 5px;
     font-size: small;
 }
 #content3 {
-    grid-area: picture2;
+    grid-area: text4;
     border: Solid black;
     border-radius: 10px;
-    background-color: rgb(250, 238, 223);
+    background: linear-gradient(90deg, rgba(70,0,115,1) 0%, rgba(117,0,192,1) 100%);
     padding: 5px;
     font-size: small;
 }
 .grid-container {
     display: grid;
-    grid-template-columns: 360px 360px;
+    grid-template-columns: 49% 49%;
     grid-template-rows: 220px 220px;
     grid-gap: 20px 20px;
     grid-template-areas: 
-        "picture1 text1"
-        "text2 picture2";
+        "text1 text2"
+        "text3 text4";
     width: 740px;
     justify-content: center;
     justify-items: stretch;
@@ -418,12 +418,14 @@ h10 {
     transition: transform .5s;
     transform: scale(1);
     box-shadow:  10px 10px silver;
+    background: linear-gradient(90deg, rgba(70,0,115,1) 0%, rgba(117,0,192,1) 100%);
+    color:rgb(255, 255, 255)
 }
 .cardClemens:hover {
     transform: scale(1.05);
 }
 .flip {
-    transform: rotateX(180deg);
+    transform: rotateX(180deg);   
 }
 .quiz {
     width: 100%;
@@ -432,18 +434,19 @@ h10 {
 }
 p{
     margin: auto;
-    padding-top: 60px;
+    padding-top: 30px;
     width: 600px;
     padding-bottom: 40px;
 }
+
 .submit {
-    border: solid black 2px;
+    border: solid rgb(71, 7, 100) 2px;
     border-radius: 2px;
-    box-shadow: 0px 5px silver;
+    box-shadow: 0px 5px rgb(60, 2, 75);
     transition: transform 0.4s;
 }
 .submit:active {
-    box-shadow: 0px 3px rgb(110, 110, 110);
+    box-shadow: 0px 3px rgb(34, 0, 44);
     transform: translateY(4px);
 }
 .content-back {
@@ -453,7 +456,7 @@ p{
     height: 100%;
     border: Solid black;
     border-radius: 10px;
-    background-color: rgb(250, 238, 223);
+    background-color:#7500c0;
     font-size: small;
     text-align: center;
     display: flex;
@@ -471,8 +474,7 @@ h1 {
     text-justify:auto;
     width:600px;
     margin:auto;
-    margin-top:30px;
-    font-size: 40px;
+    margin-top:20px;
     color:#7500c0;
 }
 .flex {
@@ -487,12 +489,12 @@ h1 {
     width: 40%;
 }
 #pm-pic3 {
-    width: 20%;
+    width: 40%;
     margin-top: 15px;
 }
 .text {
     margin: auto;
-    padding-top: 60px;
+    padding-top: 40px;
     width: 600px;
 }
 .notes {
@@ -625,7 +627,7 @@ footer {
     #check:checked ~ ul{
       left: 0;
     }
-    .flip-container{
+    .container{
       width: 90%;
     }
     h1{
@@ -655,7 +657,7 @@ footer {
       font-size: 12px;
       width: 90%;
     }
-    .flip-container{
+    .container{
       width: 90%;
     }
     .top-right{
@@ -663,12 +665,6 @@ footer {
     }
     .content1{
       font-size: 40px;
-    }
-    .headline-container{
-      font-size: 10px;
-    }
-    .kontakt-container{
-      width: 90%;
     }
   }
   
