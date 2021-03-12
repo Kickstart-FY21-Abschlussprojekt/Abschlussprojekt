@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/res/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./softskill.css" type="text/css">
+    <link rel="Stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Softskill-Training</title>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/src/quiz/JS-JSON/quiz.js" async></script>
+    <script>
+        var firebaseConfig = {
+            apiKey: "AIzaSyBqLdKaS_sz3mFga0cw_10ltMVIxBQOEZ4",
+            authDomain: "testumgebung-6eb9d.firebaseapp.com",
+            projectId: "testumgebung-6eb9d",
+            storageBucket: "testumgebung-6eb9d.appspot.com",
+            messagingSenderId: "324794393827",
+            appId: "1:324794393827:web:7cdce89f6da22ef02651d6",
+            measurementId: "G-B52LTFD60W"
+        };
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+    </script>
+</head>
+<body onload="innit(13,17)">
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+          <i class="fas fa-bars"></i>
+        </label>
+        <a href="/index.html"><img class="logo" src="/res/Accenture-Logo.png" width="140" height="90"></a>
+        <ul>
+          <li><a href="/softskills/softskill.html" class="listItem">Softskill-Training</a></li>
+          <li><a href="/Projektmanagement/projektmanagement.html" class="listItem">Projektmanagement-Skills</a></li>
+          <li><a href="/testing/testingpage.html" class="listItem">Testing</a></li>
+          <li><a href="/Softwareengineering/softwareeng.html" class="listItem">Software Engineering</a></li>
+          <li><a href="/BA/Ba.html" class="listItem">Business-Analyse</a></li>
+        </ul>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+            <script src="navigationsleiste.js"></script>
+        </div>
+    </nav>
+    
+    <div>
+        <script>
+            window.watsonAssistantChatOptions = {
+            integrationID: "f05a08ea-c453-489e-a820-0e23c03a45bb", // The ID of this integration.
+            region: "eu-de", // The region your integration is hosted in.
+            serviceInstanceID: "0c5b70fc-6648-48ff-9d11-d74e00eb5306", // The ID of your service instance.
+            onLoad: function(instance) { instance.render(); }
+            };
+            setTimeout(function(){
+            const t=document.createElement('script');
+            t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+            document.head.appendChild(t);
+            });
+        </script>
+    </div>
+    
+            <div class="container1">
+            <h1>Softskill-Training</h1>
+            
+            <div class="grid">
+                <div class="text1">Soft Skills bezeichnet Charaktereigenschaften und Fähigkeiten einer Person, die über die fachlichen Fähigkeiten hinaus gehen und persönliche, soziale und methodische Kompetenzen betreffen. Diese sind nicht nur im Berufsleben von Bedeutung, sondern werden auch regelmäßig im Alltag gefragt.</div>
+                <div class="picture1"><img src="https://karrierebibel.de/wp-content/uploads/2020/07/Soft-Skills-Hard-Skills-Liste-Beispiele-650x433.jpg" style="width: 100%; height: 100%; border-radius: 10px;"></div>
+                <div class="text2">Im Rahmen des Kickstart-Programms lernt man wertvolle Soft Skills für seine Karriere und persönliche Weiterentwicklung und trainiert diese bei praktischen Übungen </div>
+                <div class="picture2"><img src="https://www.hoteng.com/wp-content/uploads/500x300_SSK.jpg" style="width: 100%; height: 100%; border-radius: 10px;"></div>
+            </div>
+                <h2>Soziale Kompetenzen</h2>
+                <p>
+                    Dahinter verbergen sich zahlreiche Eigenschaften und Verhaltensweisen, die maßgeblich den Umgang mit anderen Menschen fördern, erleichtern und verbessern. Dazu zählen unter anderem Konfliktmanagement, Menschenkenntnisse, interkulturelle Kompetenzen und auch Kommunikationsfähigkeit.
+                </p>
+                <p>
+                    <strong>Konfliktmanagement:</strong>
+                    Selbst wenn man versucht Konflikte bereits im Vorfeld zu vermeiden, treten diese hin und wieder in verschiedenen Ausprägungen und Ausmaßen auf. Dabei ist ein Konflikt eine Auseinandersetzung zwischen Individuen, deren Interessen, Meinungen und Auffassungen auseinandergehen und in einem Konflikt zusammenstoßen. Durch Konfliktmanagement wird versucht diese vorzubeugen, aufzunehmen, konstruktiv zu bewältigen und zu deeskalieren. Diese Kompetenz kann durch einen konstruktiven Umgang, dem Bewusstsein von Konfliktmanagement und dessen Vermeidungund durch praktische Anwendung verbessert werden
+                </p>
+                <p>
+                    <strong>Menschenkenntnis:</strong>
+                    Die Fähigkeit, individuelle und typische Charakteristika von Einzelpersonen und Personengruppen zutreffend vorherzusagen, zu erkennen und berücksichtigen zu können. Diese Kompetenz hilft in jeder zwischen menschlichen Beziehung, sie hilft dabei Streitigkeiten aus dem Weg zu gehen und mit verschiedenen Arten von Personen umzugehen. Hierbei spielt auch die interkulturelle Kompetenz eine sehr wichtige Rolle. Vor allem beim Umgang mit Menschen unterschiedlicher Kulturen, ist es von Bedeutung mit anderen Kulturen angemessen und respektvoll zu interagieren, Ängste abzubauen und Stereotypen zu revidieren.
+                </p>
+                <p>
+                    <strong>Kommunikationsfähigkeit:</strong>
+                    Kommunizieren zu können ist eine der wichtigsten Fähigkeiten im Beruf und im privaten Leben, denn niemand kommt am Kontakt mit anderen Menschen vorbei. Dabei geht es darum, zum richtigen Zeitpunkt die richtigen Worte zu wählen und keine Missverständnisse aufkommen zu lassen. Dazu gehört nicht nur reden, sondern auch zuhören. Wichtig dabei ist es Grundregeln der Kommunikation zu definieren und zu befolgen, wodurch mit bewusster Kommunikation auch Probleme vermieden werden können. Damit zusammenhängend ist die Geschäftskommunikation, der Prozess des Informationsaustauschs zwischen Mitarbeitern und Beteiligte innerhalb und außerhalb eines Unternehmens. Wichtige Kommunikationskanäle sind dabei Konferenzen, Emails und der direkte Kontakt. Auch hierbei ist es wichtig zu beachten, dass es Regeln für einen geeigneten und respektvollen Umgangmit Menschen und den verschiedenen sozialen Typen gibt.
+                </p>
+                <img src="1135729959.jpg" alt="Girl" id="pic">
+                <h2>Persönliche Kompetenzen</h2>
+                <p>
+                    Diese sind vollkommen individuell für jede Person. Dabei geht es aber meist nicht darum, ob man über diese Kompetenzen verfügt, sondern eher wie stark sie bei dem Einzelnen ausgeprägt ist. Diese sind besonders wichtig für eine harmonische Arbeitsumgebung und die Zusammenarbeit und Umgang mit anderen Menschen und können z.B. schnell über den Erfolg bzw. Misserfolg eines Projekts bestimmen.
+                </p>
+                <p>
+                    <strong>Selbstbewusstsein:</strong>
+                    Eine grundlegende persönliche Kompetenz für das Berufsleben. Es ist wichtig, dass du selbst von dir und deiner Arbeit überzeugt bist, damit du auch andere überzeugen kannst. Dies beinhaltet die Kenntnis persönlicher Stärken und Schwächen, Vorlieben und Abneigungen sowie eine möglichst objektive Einschätzung und Bewertung der eigenen Gefühle, Verhaltensweisen und Charaktermerkmale.
+                </p>
+                <p>
+                    <strong>Stressresistenz:</strong>
+                    Es kann immer zu stressigen Situationen kommen, in denen man an seine Grenzen stößt. Stressresistenz und Belastbarkeit sind deshalb persönliche Kompetenzen, um seinen Berufsalltag zu meistern. Dazu gehört der Umgang mit stressigen und unbekannten Situationen, sich an Fristen zu halten und sich nicht aus der Ruhe bringen zu lassen. Dabei ist es hilfreich, verschiedene Szenarien mit angepassten Bedingungen wie veränderter Zeitrahmen, angepasstes Team oder kurzfristige Änderung der Aufgabe zu proben.
+                </p>
+                <h2>Methodische Kompetenzen</h2>
+                <p>
+                    Diese umfassen alle Kenntnisse, die benötigt werden, um komplexe Aufgaben und Probleme systematisch und methodisch zu bearbeiten und zu einer geeigneten Lösungsstrategie zu führen. Methodenkompetenz ist somit die Basis, die jeder braucht, um sich schnell neues Wissen anzueignen und sich in neue Themengebiete einzuarbeiten, der Filter, um Wichtiges von Unwichtigem zu trennen und die Kenntnis den Einsatz von Techniken und Hilfsmitteln optimal zu steuern.
+                </p>
+                <p>
+                    <strong>Planungs- & Organistationsfähigkeit, Zeitmanagement:</strong>
+                    Die systematische Art des Denkens sollte auf den gesamten Arbeitsprozess übertragen werden, denn gut organisiert ist halb gewonnen. Durch Organisationstalente kann das Beste aus der Zeit herausgeholt und der Arbeitstag optimal genutzt werden. So kann auch Stress vermieden werden. Hier spielt auch das Zeitmanagement eine große Rolle, denn wenn man die Aufgaben und Zeit sinnvoll einteilt, hat man auch Zeit für die anderen Dinge. Gutes Zeitmanagement soll dabei helfen, die Zeit so gut wie möglich einzuteilen, sodass alle Aufgaben erledigt werden.
+                </p>
+                <p>
+                    <strong>Präsentationsfähigkeit:</strong>
+                    Diese methodische Kompetenz hilft, deine Ergebnisse auch anderen verständlich zu machen. Worte reichen dafür meist nicht aus, auch Körpersprache und Rhetorik sind bei einer Präsentation entscheidend. Oft bleiben Vorträge mit klug gewählten Präsentationstechniken länger im Gedächtnis. Damit lässt sich gutes Präsentieren nicht nur lernen und trainieren, denn die Techniken, Tipps und Methoden steigern auch die Wirkung eines Vortrags und Redners. Unterstützend können hierbei technische Tools wie PowerPoint oder Whiteboards sein.
+                </p>
+            </div>
+            <footer>
+                <a id="footerhref" href="/index.html#contact">Kontakt</a>
+                <div id="copyright">&lt;/&gt; with 💜 by Kickstart FY21</div>
+            </footer>
+                    
+        </div>
+        <div>
+    
+            <!--TEST-->
+               
+            <form class="card transition" id="quiz" name="quiz">
+                <div id="question">
+                <h10 class="transition" id="questions"></h10>    
+                </div>
+                <div class="answers" id="quiz-option"></div>
+                <div class="cta-container transition"><button id="submit-btn" class="btn-animated button" type="button">Submit</button></div>
+                <div class="card_circle transition "></div>
+            </form>
+            <div class="spacerQuiz"></div>
+            <!--TEST-->
+                    
+        </div>
+</body>
+</html>

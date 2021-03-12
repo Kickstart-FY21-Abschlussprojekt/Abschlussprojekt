@@ -1,0 +1,118 @@
+.hidden{
+
+display:none;
+
+}
+
+#buttons-container{
+
+float: left;
+margin: 100px 50px 80px 10em;
+width: 400px;
+
+}
+
+.buttonGame{
+
+    width: 80px;
+    height: 50px;
+    margin:10px;
+    text-align: center;
+    background-color: #7500c0;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+
+.buttonGame:active{
+
+    background-color: white;
+    color: #7500c0;
+    border-color:#7500c0;
+    outline: none;
+}
+.buttonGame:focus{
+
+    outline: none;
+}
+
+#up{
+
+margin-left: 100px;
+
+}
+
+#down{
+
+    margin-left: 100px;
+}
+
+#right{
+
+    margin-left: 87.5px;
+}
+
+#restart{
+
+    width: 200px;
+    height: 50px;
+    margin: 10px;
+    text-align: center;
+    background-color: #7500c0;
+    color: white;
+    border: 1px solid #7500c0;
+    display:block;
+    
+}
+
+#restart:active{
+
+    background-color: white;
+    color: #7500c0;
+    border-color:#7500c0;
+    outline: none;
+}
+#restart:focus{
+
+    outline: none;
+}
+
+.formatierung{
+
+    float:left;
+    border: 1px solid black;
+    margin:10px;
+    margin-bottom: 0;
+    
+}
+
+#info{
+    width: 100%;
+    height: auto;
+    clear:both;
+}
+
+.infotext{
+
+    width: 578px;
+    margin:10px;
+    padding: 10px;
+    font-size: 18px;
+    text-align: justify;
+    border: 2px solid #7500c0;
+
+}
+
+#ui{
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+}
+
+#anleitung{
+
+    text-align: center;
+    width: 280px;
+    font-weight: bold;
+}

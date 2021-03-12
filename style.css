@@ -1,51 +1,66 @@
-body {
-margin: 0;
-padding: 0;
-font-family: Arial, Helvetica, sans-serif;
-}
-
-ul {
-  list-style-type: none;
-  top:0px;
-  overflow: hidden;
-  background-color: whitesmoke;
-  box-shadow: 0 1px 3px 0 #000;
-  position: sticky;
-  width: 100%;
+*{
+  padding: 0;
   margin: 0;
-  padding: 0px 0px 0px 20px;
-}
-
-#navigationsleiste{
-  position: fixed;
-  width: 100%;
-  margin: 0px;
-  z-index: 100;
-}
-
-li {
-  margin:  12px 40px 12px 20px;
-  float: right;
-  top: 0px;
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
 }
-  li a:hover {
-    background-color: #e5e5e5;
-  }
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+nav{
+  background-color:whitesmoke;
+  box-shadow: 0 1px 3px 0 #000;
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+img.logo{
+  padding: 0px;
+  margin-top: -8px;
+  margin-left: 40px;
+}
+nav ul{
+  float: right;
+  margin-right: 40px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+nav ul li a{
+  color: black;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 7px 19px;
+  border-radius: 3px;
+  text-transform: capitalize;
+}
+.listItem.active,.listItem:hover{
+  background: #e5e5e5;
+  transition: .5s;
+}
+
+.checkbtn{
+  font-size: 30px;
+  color: black;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+#check{
+  display: none;
+}
 
 .progress-container
 {
   width: 100%;
   height: 8px;
-  position: sticky;
-  top: 0;
+  margin-top: -6px;
   z-index: 1;
 }
 
@@ -55,12 +70,6 @@ li a {
   background: linear-gradient(90deg, rgba(70,0,115,1) 0%, rgba(117,0,192,1) 50%, rgba(161,0,255,1) 100%);
   width: 0%;
 
-}
-
-*
-{
-  margin:0;
-  padding-top: 0;
 }
 
 .btn{
@@ -90,23 +99,27 @@ p{
 }
 
 h1 { 
-  background-image: url(./res/accenture1.jpg); 
+  background-image: url(/res/accenture1.jpg); 
   background-repeat: repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; 
-  margin-top: 50px; 
-  margin-bottom: -50px;
-  font-size: 120px; 
+  padding-top: 80px;
+  margin-bottom: -60px;
+  font-size: 100px; 
   text-align: center; 
   font-weight: bold; 
   text-transform: uppercase; 
   font-weight: 800; 
   -webkit-font-smoothing: antialiased; 
-} 
+}
+
+.container{
+  text-align:justify;
+}
 
 .kontakt-container{
 
-  width: 50%;
+  width: 60%;
   margin: auto;
   color: rgb(61, 61, 61);
 
@@ -114,6 +127,7 @@ h1 {
 }
 
 .headline-container{
+  font-size: 16px;
 }
 
 #title {
@@ -162,7 +176,6 @@ h1 {
     top: 0;
     left: 0;
     border: 5px solid black;
-    border-radius: 20px;
   }
   .front {
     z-index: 2;
@@ -193,31 +206,30 @@ h1 {
     
   }
   .content2 {
-    font-size: 12px;
-    width: 150px;
+    font-size: 14px;
+    width: 420px;
     height: 120px;
     margin: auto;
-    padding: 10px;
-    color: rgb(7, 7, 7);
-    background: transparent;
-    text-align: center;
+    color: black;
+    text-align:justify;
+    
   }
   .content2 a {
     color: White;
     text-decoration: Underline;
   }
   #softskill {
-    background-image: url(./res/Front2.jpg);
+    background-image: url(/res/Front2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     
   }
   #softskill-back {
-    background-image:url(./res/pexels-soumil-kumar-735911.jpg) ;
+    background-image:url(/res/pexels-soumil-kumar-735911.jpg) ;
     background-repeat: no-repeat;
     background-size: cover;
     
-    opacity: 0.6;
+    
   }
   #projektmanagement {
     background-image:url(./res/Front4.jpg) ;
@@ -225,45 +237,44 @@ h1 {
     background-size: cover ;
   }
   #projektmanagement-back {
-    background-image: url(./res/pexels-lukas-669615\ \(1\).jpg);
+    background-image: url(/res/pexels-lukas-6696151.jpg);
     background-repeat: no-repeat;
     background-size: cover ;
-    opacity: 0.3;
+    
   }
   #testing {
-    background-image: url(./res/Front6.png);
+    background-image: url(/res/Front6.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
   #testing-back {
-    background-image: url(./res/pexels-thisisengineering-3862632.png);
+    background-image: url(/res/pexels-thisisengineering-38626321.jpg);
     background-repeat: no-repeat;
-    opacity: 0.4;
     background-size: cover;
   }
   #bA {
-    background-image: url(./res/Front5.jpg);
+    background-image: url(/res/Front5.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     
 
   }
   #bA-back {
-    background-image: url(./res/pexels-fauxels-3183153.jpg);
+    background-image: url(/res/pexels-fauxels-3183153.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.4
+    
   }
   #sE {
-    background-image: url(./res/Front.jpg);
+    background-image: url(/res/Front.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   }
   #sE-back {
-    background-image: url(./res/pexels-luis-gomes-546819.jpg);
+    background-image: url(/res/pexels-luis-gomes-546819.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.4;
+    
 
   }
 
@@ -308,7 +319,7 @@ h1 {
 }
   .input:focus{
     outline: none !important;
-    border-color: blue;
+    border-color: #7500c0;
   }
 
 #nachricht {
@@ -327,7 +338,7 @@ h1 {
   height: 35px;
   width: 100px;
   color: white;
-  background-color: rgb(109, 109, 255);
+  background-color: #7500c0;
   border: none;
 
 }
@@ -337,6 +348,7 @@ footer {
   width: 100%;
   height: 40px;
   position: fixed;
+  z-index: 100;
   bottom: 0;
   background-color: #f2f2f2;
   border: 1px solid black;
@@ -347,4 +359,177 @@ footer {
   height: 100%;
   text-align: center;
   padding-top: 10px;
+}
+
+.container-image{
+  position: relative;
+  text-align: center;
+  color: white;
+  font-size:60px;
+  padding-top:60px;
+  font-family: Arial, Helvetica, sans-serif; 
+  font-weight: 900;
+}
+
+.top-right {
+  position: absolute;
+  top: 80px;
+  right: 16px;
+}
+
+.WatsonAssistantChatHost{
+  position: fixed;
+  z-index: 0;
+}
+
+#kartenlink{
+  color:black;
+  font-weight:bold;
+}
+
+@media (max-width: 1182px){
+  img.logo{
+  padding: 0px;
+  margin-top: -8px;
+  margin-left: 30px;
+  }
+  nav ul{
+    float: right;
+    margin-right: 40px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 7px 19px;
+    border-radius: 3px;
+    text-transform: capitalize;
+  }
+  .listItem.active,.listItem:hover{
+    background: #e5e5e5;
+    transition: .5s;
+  }
+}
+@media (max-width: 1100px){
+  img.logo{
+    padding: 0px;
+    margin-top: -8px;
+    margin-left: 20px;
+  }
+  nav ul{
+    float: right;
+    margin-right: 40px;
+  }
+  nav ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+  }
+  nav ul li a{
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 7px 19px;
+    border-radius: 3px;
+    text-transform: capitalize;
+  }
+  .listItem.active,.listItem:hover{
+    background: #e5e5e5;
+    transition: .5s;
+  }  
+  h1{
+    font-size: 90px;
+  }
+  .top-right{
+    font-size: 50px;
+  }
+  .content1{
+    font-size: 60px;
+  }
+  .headline-container{
+    font-size: 14px;
+  }
+  .kontakt-container{
+    width: 70%;
+  }
+}
+@media (max-width: 1000px){
+  .checkbtn{
+    display: block;
+  }
+  ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #e5e5e5;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  .listItem:hover,.listItem.active{
+    background: #a100ff;
+    transition: .5s;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+  .flip-container{
+    width: 90%;
+  }
+  h1{
+    font-size: 80px;
+  }
+  p{
+    font-size: 14px;
+  }
+  .top-right{
+    font-size: 40px;
+  }
+  .content1{
+    font-size: 50px;
+  }
+  .headline-container{
+    font-size: 12px;
+  }
+  .kontakt-container{
+    width: 80%;
+  }
+}
+@media (max-width: 700px){
+  h1{
+    font-size: 70px;
+  }
+  p{
+    font-size: 12px;
+    width: 90%;
+  }
+  .flip-container{
+    width: 90%;
+  }
+  .content1{
+    font-size: 40px;
+  }
+  .headline-container{
+    font-size: 10px;
+  }
+  .kontakt-container{
+    width: 90%;
+  }
+  .top-right{
+    top: 70px;
+  }
 }
