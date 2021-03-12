@@ -66,9 +66,18 @@ function buildNextQuestion(id) {
     }else{
         //Ende dieser Sektion erreicht
         console.log("test");
-        $( "#quiz-option" ).replaceWith(
-            `<div class="answers" id ="NextQuestionTAG"> Sie haben das Ende dieses Quizes erreicht.
-            Dabei haben sie von ${dif} Fragen, ${Pscore} richtig beantwortet.</div>`
+        $('#QuestionContainer').remove();
+        $("#submit-btn").remove();
+        $( "#quiz-option" ).show();
+        $('div[name="answersblock"]').remove();
+        $('#quiz-option').append(
+            `<div name="answersblock">         
+            </div>` 
+        );
+        $('div[name="answersblock"]').append(
+            `Herzlichen Glückwunsch, Sie haben das Quiz hier beendet.
+            Dabei haben Sie ${Pscore}/${dif} richtig beantwortet.
+            Weiter so ...`
         );
     }
 };
